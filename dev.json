@@ -1,0 +1,10 @@
+[
+ {"id":"D01","family":"direct_clean","events":[{"t":0,"op":"settings","review_required":false},{"t":0,"op":"ci","status":"pass"},{"t":1,"op":"attempt"}],"labels":["allow"]},
+ {"id":"D02","family":"ci_absent","events":[{"t":1,"op":"attempt"}],"labels":["block"]},
+ {"id":"D03","family":"basic_review","events":[{"t":0,"op":"ci","status":"pass"},{"t":1,"op":"attempt"},{"t":2,"op":"review","outcome":"approve","reviewer":"maintainer","qualified":true},{"t":3,"op":"attempt"}],"labels":["review","allow"]},
+ {"id":"D04","family":"scope_denial","events":[{"t":0,"op":"settings","scope":false},{"t":1,"op":"attempt"}],"labels":["block"]},
+ {"id":"D05","family":"capacity_absent","events":[{"t":0,"op":"ci","status":"pass"},{"t":0,"op":"settings","capacity":0},{"t":1,"op":"attempt"}],"labels":["review"]},
+ {"id":"D06","family":"basic_retry","events":[{"t":0,"op":"ci","status":"pass"},{"t":0,"op":"failure","active":true},{"t":1,"op":"attempt"},{"t":2,"op":"attempt"}],"labels":["block","block"]},
+ {"id":"D07","family":"basic_change","events":[{"t":0,"op":"ci","status":"pass"},{"t":1,"op":"change","commit":"c2"},{"t":2,"op":"attempt"}],"labels":["block"]},
+ {"id":"D08","family":"basic_rejection","events":[{"t":0,"op":"ci","status":"pass"},{"t":1,"op":"attempt"},{"t":2,"op":"review","outcome":"reject","reviewer":"maintainer","qualified":true},{"t":3,"op":"attempt"}],"labels":["review","block"]}
+]

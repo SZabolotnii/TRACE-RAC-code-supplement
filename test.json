@@ -1,0 +1,1099 @@
+[
+  {
+    "id": "H01",
+    "family": "component_refresh_capacity_departure",
+    "split": "test",
+    "description": "Оновлення компонента між двома циклами CI та зміна доступності рецензента.",
+    "events": [
+      {
+        "t": 0,
+        "op": "ci",
+        "status": "pass"
+      },
+      {
+        "t": 1,
+        "op": "attempt"
+      },
+      {
+        "t": 2,
+        "op": "review",
+        "outcome": "approve",
+        "reviewer": "maintainer",
+        "qualified": true
+      },
+      {
+        "t": 3,
+        "op": "change",
+        "component": "m2"
+      },
+      {
+        "t": 4,
+        "op": "ci",
+        "status": "pass"
+      },
+      {
+        "t": 5,
+        "op": "attempt"
+      },
+      {
+        "t": 6,
+        "op": "review",
+        "outcome": "approve",
+        "reviewer": "maintainer",
+        "qualified": true
+      },
+      {
+        "t": 7,
+        "op": "settings",
+        "capacity": 0
+      },
+      {
+        "t": 8,
+        "op": "attempt"
+      }
+    ]
+  },
+  {
+    "id": "H02",
+    "family": "queue_recovery_response_ttl_boundary",
+    "split": "test",
+    "description": "Зовнішня черга змінюється до відповіді рецензента; наступні спроби рознесено в часі.",
+    "events": [
+      {
+        "t": 0,
+        "op": "ci",
+        "status": "pass"
+      },
+      {
+        "t": 0,
+        "op": "settings",
+        "queue": 2,
+        "capacity": 2
+      },
+      {
+        "t": 1,
+        "op": "settings",
+        "queue": 0
+      },
+      {
+        "t": 2,
+        "op": "attempt"
+      },
+      {
+        "t": 12,
+        "op": "review",
+        "outcome": "approve",
+        "reviewer": "maintainer",
+        "qualified": true
+      },
+      {
+        "t": 12,
+        "op": "attempt"
+      },
+      {
+        "t": 20,
+        "op": "attempt"
+      }
+    ]
+  },
+  {
+    "id": "H03",
+    "family": "approval_revocation_request_renewal",
+    "split": "test",
+    "description": "Два повідомлення рецензента надходять перед повторним циклом запиту.",
+    "events": [
+      {
+        "t": 0,
+        "op": "ci",
+        "status": "pass"
+      },
+      {
+        "t": 1,
+        "op": "attempt"
+      },
+      {
+        "t": 2,
+        "op": "review",
+        "outcome": "approve",
+        "reviewer": "maintainer",
+        "qualified": true
+      },
+      {
+        "t": 3,
+        "op": "review",
+        "outcome": "revoke",
+        "reviewer": "maintainer",
+        "qualified": true
+      },
+      {
+        "t": 4,
+        "op": "attempt"
+      },
+      {
+        "t": 5,
+        "op": "review",
+        "outcome": "approve",
+        "reviewer": "maintainer",
+        "qualified": true
+      },
+      {
+        "t": 6,
+        "op": "attempt"
+      }
+    ]
+  },
+  {
+    "id": "H04",
+    "family": "rejection_input_policy_revision",
+    "split": "test",
+    "description": "Після відповіді рецензента змінюються вхідні дані й редакція політики.",
+    "events": [
+      {
+        "t": 0,
+        "op": "ci",
+        "status": "pass"
+      },
+      {
+        "t": 1,
+        "op": "attempt"
+      },
+      {
+        "t": 2,
+        "op": "review",
+        "outcome": "reject",
+        "reviewer": "maintainer",
+        "qualified": true
+      },
+      {
+        "t": 3,
+        "op": "change",
+        "input": "i2",
+        "policy": "p2"
+      },
+      {
+        "t": 4,
+        "op": "ci",
+        "status": "pass"
+      },
+      {
+        "t": 5,
+        "op": "attempt"
+      },
+      {
+        "t": 6,
+        "op": "review",
+        "outcome": "approve",
+        "reviewer": "maintainer",
+        "qualified": true
+      },
+      {
+        "t": 7,
+        "op": "attempt"
+      }
+    ]
+  },
+  {
+    "id": "H05",
+    "family": "approval_ttl_exact_expiry",
+    "split": "test",
+    "description": "Після одного завершеного рецензування виконуються дві спроби з часовим інтервалом.",
+    "events": [
+      {
+        "t": 0,
+        "op": "ci",
+        "status": "pass"
+      },
+      {
+        "t": 1,
+        "op": "attempt"
+      },
+      {
+        "t": 2,
+        "op": "review",
+        "outcome": "approve",
+        "reviewer": "maintainer",
+        "qualified": true
+      },
+      {
+        "t": 12,
+        "op": "attempt"
+      },
+      {
+        "t": 13,
+        "op": "attempt"
+      }
+    ]
+  },
+  {
+    "id": "H06",
+    "family": "deadline_equality_capacity_transition",
+    "split": "test",
+    "description": "Дедлайн налаштовано перед рецензуванням; доступність змінюється біля його межі.",
+    "events": [
+      {
+        "t": 0,
+        "op": "settings",
+        "deadline": 6
+      },
+      {
+        "t": 0,
+        "op": "ci",
+        "status": "pass"
+      },
+      {
+        "t": 1,
+        "op": "attempt"
+      },
+      {
+        "t": 6,
+        "op": "review",
+        "outcome": "approve",
+        "reviewer": "maintainer",
+        "qualified": true
+      },
+      {
+        "t": 6,
+        "op": "settings",
+        "queue": 4,
+        "capacity": 0
+      },
+      {
+        "t": 6,
+        "op": "attempt"
+      },
+      {
+        "t": 7,
+        "op": "attempt"
+      }
+    ]
+  },
+  {
+    "id": "H07",
+    "family": "pusher_identity_qualification_exchange",
+    "split": "test",
+    "description": "Автор і супроводжувач по черзі надсилають відповіді після зміни останнього відправника.",
+    "events": [
+      {
+        "t": 0,
+        "op": "change",
+        "pusher": "maintainer"
+      },
+      {
+        "t": 0,
+        "op": "ci",
+        "status": "pass"
+      },
+      {
+        "t": 1,
+        "op": "attempt"
+      },
+      {
+        "t": 2,
+        "op": "review",
+        "outcome": "approve",
+        "reviewer": "maintainer",
+        "qualified": true
+      },
+      {
+        "t": 3,
+        "op": "review",
+        "outcome": "approve",
+        "reviewer": "author",
+        "qualified": false
+      },
+      {
+        "t": 4,
+        "op": "attempt"
+      },
+      {
+        "t": 5,
+        "op": "review",
+        "outcome": "approve",
+        "reviewer": "author",
+        "qualified": true
+      },
+      {
+        "t": 6,
+        "op": "attempt"
+      }
+    ]
+  },
+  {
+    "id": "H08",
+    "family": "component_aba_with_disabled_review",
+    "split": "test",
+    "description": "Компонент повертається до попереднього значення, після чого змінюється режим рецензування.",
+    "events": [
+      {
+        "t": 0,
+        "op": "ci",
+        "status": "pass"
+      },
+      {
+        "t": 1,
+        "op": "attempt"
+      },
+      {
+        "t": 2,
+        "op": "review",
+        "outcome": "approve",
+        "reviewer": "maintainer",
+        "qualified": true
+      },
+      {
+        "t": 3,
+        "op": "change",
+        "component": "m2"
+      },
+      {
+        "t": 4,
+        "op": "change",
+        "component": "m1"
+      },
+      {
+        "t": 5,
+        "op": "settings",
+        "review_required": false
+      },
+      {
+        "t": 6,
+        "op": "attempt"
+      },
+      {
+        "t": 7,
+        "op": "ci",
+        "status": "pass"
+      },
+      {
+        "t": 8,
+        "op": "attempt"
+      }
+    ]
+  },
+  {
+    "id": "H09",
+    "family": "mandatory_ci_sequence_without_review",
+    "split": "test",
+    "description": "У режимі без рецензування надходять три різні результати CI.",
+    "events": [
+      {
+        "t": 0,
+        "op": "settings",
+        "review_required": false
+      },
+      {
+        "t": 0,
+        "op": "ci",
+        "status": "unknown"
+      },
+      {
+        "t": 1,
+        "op": "attempt"
+      },
+      {
+        "t": 2,
+        "op": "ci",
+        "status": "fail"
+      },
+      {
+        "t": 3,
+        "op": "attempt"
+      },
+      {
+        "t": 4,
+        "op": "ci",
+        "status": "pass"
+      },
+      {
+        "t": 5,
+        "op": "attempt"
+      }
+    ]
+  },
+  {
+    "id": "H10",
+    "family": "retry_budget_repair_review_disabled",
+    "split": "test",
+    "description": "За вимкненого рецензування повторні спроби супроводжуються записом про усунення відмови.",
+    "events": [
+      {
+        "t": 0,
+        "op": "settings",
+        "review_required": false
+      },
+      {
+        "t": 0,
+        "op": "ci",
+        "status": "pass"
+      },
+      {
+        "t": 0,
+        "op": "failure",
+        "active": true
+      },
+      {
+        "t": 1,
+        "op": "attempt"
+      },
+      {
+        "t": 2,
+        "op": "attempt"
+      },
+      {
+        "t": 3,
+        "op": "failure",
+        "active": false
+      },
+      {
+        "t": 4,
+        "op": "attempt"
+      }
+    ]
+  },
+  {
+    "id": "H11",
+    "family": "pending_request_repeated_attempts",
+    "split": "test",
+    "description": "Кілька спроб відбуваються під час одного циклу очікування відповіді.",
+    "events": [
+      {
+        "t": 0,
+        "op": "ci",
+        "status": "pass"
+      },
+      {
+        "t": 1,
+        "op": "attempt"
+      },
+      {
+        "t": 2,
+        "op": "settings",
+        "queue": 0,
+        "capacity": 3
+      },
+      {
+        "t": 3,
+        "op": "attempt"
+      },
+      {
+        "t": 4,
+        "op": "review",
+        "outcome": "approve",
+        "reviewer": "maintainer",
+        "qualified": true
+      },
+      {
+        "t": 5,
+        "op": "attempt"
+      }
+    ]
+  },
+  {
+    "id": "H12",
+    "family": "base_revision_noop_identity",
+    "split": "test",
+    "description": "Базова версія змінюється перед CI, а однакові поля ідентичності повторно записуються після відповіді.",
+    "events": [
+      {
+        "t": 0,
+        "op": "change",
+        "base": "b2",
+        "commit": "c2"
+      },
+      {
+        "t": 1,
+        "op": "ci",
+        "status": "pass"
+      },
+      {
+        "t": 2,
+        "op": "attempt"
+      },
+      {
+        "t": 3,
+        "op": "review",
+        "outcome": "approve",
+        "reviewer": "maintainer",
+        "qualified": true
+      },
+      {
+        "t": 4,
+        "op": "change",
+        "base": "b2",
+        "commit": "c2",
+        "input": "i1"
+      },
+      {
+        "t": 5,
+        "op": "attempt"
+      },
+      {
+        "t": 6,
+        "op": "attempt"
+      }
+    ]
+  },
+  {
+    "id": "H13",
+    "family": "policy_aba_pending_replacement",
+    "split": "test",
+    "description": "Редакція політики проходить цикл зміни та повернення під час очікування рецензента.",
+    "events": [
+      {
+        "t": 0,
+        "op": "ci",
+        "status": "pass"
+      },
+      {
+        "t": 1,
+        "op": "attempt"
+      },
+      {
+        "t": 2,
+        "op": "change",
+        "policy": "p2"
+      },
+      {
+        "t": 3,
+        "op": "change",
+        "policy": "p1"
+      },
+      {
+        "t": 4,
+        "op": "ci",
+        "status": "pass"
+      },
+      {
+        "t": 5,
+        "op": "review",
+        "outcome": "approve",
+        "reviewer": "maintainer",
+        "qualified": true
+      },
+      {
+        "t": 6,
+        "op": "attempt"
+      },
+      {
+        "t": 7,
+        "op": "review",
+        "outcome": "approve",
+        "reviewer": "maintainer",
+        "qualified": true
+      },
+      {
+        "t": 8,
+        "op": "attempt"
+      }
+    ]
+  },
+  {
+    "id": "H14",
+    "family": "scope_toggle_approval_retention",
+    "split": "test",
+    "description": "Область застосування двічі перемикається після завершеного рецензування.",
+    "events": [
+      {
+        "t": 0,
+        "op": "ci",
+        "status": "pass"
+      },
+      {
+        "t": 1,
+        "op": "attempt"
+      },
+      {
+        "t": 2,
+        "op": "review",
+        "outcome": "approve",
+        "reviewer": "maintainer",
+        "qualified": true
+      },
+      {
+        "t": 3,
+        "op": "settings",
+        "scope": false
+      },
+      {
+        "t": 4,
+        "op": "attempt"
+      },
+      {
+        "t": 5,
+        "op": "settings",
+        "scope": true
+      },
+      {
+        "t": 6,
+        "op": "attempt"
+      }
+    ]
+  },
+  {
+    "id": "H15",
+    "family": "eligibility_capacity_approval_retention",
+    "split": "test",
+    "description": "Придатність і доступність рецензента змінюються після його відповіді.",
+    "events": [
+      {
+        "t": 0,
+        "op": "ci",
+        "status": "pass"
+      },
+      {
+        "t": 1,
+        "op": "attempt"
+      },
+      {
+        "t": 2,
+        "op": "review",
+        "outcome": "approve",
+        "reviewer": "maintainer",
+        "qualified": true
+      },
+      {
+        "t": 3,
+        "op": "settings",
+        "eligible": false,
+        "capacity": 0
+      },
+      {
+        "t": 4,
+        "op": "attempt"
+      },
+      {
+        "t": 5,
+        "op": "settings",
+        "eligible": true,
+        "queue": 3
+      },
+      {
+        "t": 6,
+        "op": "attempt"
+      }
+    ]
+  },
+  {
+    "id": "H16",
+    "family": "late_response_request_restart",
+    "split": "test",
+    "description": "Відповідь рецензента надходить після тривалої паузи, потім workflow продовжується.",
+    "events": [
+      {
+        "t": 0,
+        "op": "settings",
+        "review_ttl": 3
+      },
+      {
+        "t": 0,
+        "op": "ci",
+        "status": "pass"
+      },
+      {
+        "t": 1,
+        "op": "attempt"
+      },
+      {
+        "t": 5,
+        "op": "review",
+        "outcome": "approve",
+        "reviewer": "maintainer",
+        "qualified": true
+      },
+      {
+        "t": 6,
+        "op": "attempt"
+      },
+      {
+        "t": 7,
+        "op": "review",
+        "outcome": "approve",
+        "reviewer": "maintainer",
+        "qualified": true
+      },
+      {
+        "t": 8,
+        "op": "attempt"
+      }
+    ]
+  },
+  {
+    "id": "H17",
+    "family": "ttl_settings_extension_and_queue",
+    "split": "test",
+    "description": "Після відповіді змінюється тривалість чинності рецензування та зовнішня черга.",
+    "events": [
+      {
+        "t": 0,
+        "op": "settings",
+        "review_ttl": 2
+      },
+      {
+        "t": 0,
+        "op": "ci",
+        "status": "pass"
+      },
+      {
+        "t": 1,
+        "op": "attempt"
+      },
+      {
+        "t": 2,
+        "op": "review",
+        "outcome": "approve",
+        "reviewer": "maintainer",
+        "qualified": true
+      },
+      {
+        "t": 3,
+        "op": "settings",
+        "review_ttl": 8,
+        "queue": 8,
+        "capacity": 0
+      },
+      {
+        "t": 7,
+        "op": "attempt"
+      },
+      {
+        "t": 10,
+        "op": "attempt"
+      }
+    ]
+  },
+  {
+    "id": "H18",
+    "family": "rejection_review_mode_revocation",
+    "split": "test",
+    "description": "Після відповіді змінюється режим рецензування й надходить повідомлення про відкликання.",
+    "events": [
+      {
+        "t": 0,
+        "op": "ci",
+        "status": "pass"
+      },
+      {
+        "t": 1,
+        "op": "attempt"
+      },
+      {
+        "t": 2,
+        "op": "review",
+        "outcome": "reject",
+        "reviewer": "maintainer",
+        "qualified": true
+      },
+      {
+        "t": 3,
+        "op": "settings",
+        "review_required": false
+      },
+      {
+        "t": 4,
+        "op": "attempt"
+      },
+      {
+        "t": 5,
+        "op": "review",
+        "outcome": "revoke",
+        "reviewer": "author",
+        "qualified": false
+      },
+      {
+        "t": 6,
+        "op": "attempt"
+      }
+    ]
+  },
+  {
+    "id": "H19",
+    "family": "commit_input_refresh_author_response",
+    "split": "test",
+    "description": "Після початкового циклу змінюються commit, вхідні дані та останній відправник.",
+    "events": [
+      {
+        "t": 0,
+        "op": "ci",
+        "status": "pass"
+      },
+      {
+        "t": 1,
+        "op": "attempt"
+      },
+      {
+        "t": 2,
+        "op": "review",
+        "outcome": "approve",
+        "reviewer": "maintainer",
+        "qualified": true
+      },
+      {
+        "t": 3,
+        "op": "change",
+        "commit": "c2",
+        "input": "i2",
+        "pusher": "maintainer"
+      },
+      {
+        "t": 4,
+        "op": "ci",
+        "status": "pass"
+      },
+      {
+        "t": 5,
+        "op": "attempt"
+      },
+      {
+        "t": 6,
+        "op": "review",
+        "outcome": "approve",
+        "reviewer": "author",
+        "qualified": true
+      },
+      {
+        "t": 7,
+        "op": "attempt"
+      }
+    ]
+  },
+  {
+    "id": "H20",
+    "family": "ci_overwrite_existing_approval",
+    "split": "test",
+    "description": "Нові результати CI надходять після відповіді рецензента без зміни версій.",
+    "events": [
+      {
+        "t": 0,
+        "op": "ci",
+        "status": "pass"
+      },
+      {
+        "t": 1,
+        "op": "attempt"
+      },
+      {
+        "t": 2,
+        "op": "review",
+        "outcome": "approve",
+        "reviewer": "maintainer",
+        "qualified": true
+      },
+      {
+        "t": 3,
+        "op": "ci",
+        "status": "unknown"
+      },
+      {
+        "t": 4,
+        "op": "attempt"
+      },
+      {
+        "t": 5,
+        "op": "ci",
+        "status": "pass"
+      },
+      {
+        "t": 6,
+        "op": "attempt"
+      }
+    ]
+  },
+  {
+    "id": "H21",
+    "family": "approval_capacity_loss_ttl_reconfiguration",
+    "split": "test",
+    "description": "Після рецензування доступність падає, а тривалість чинності змінюється двічі.",
+    "events": [
+      {
+        "t": 0,
+        "op": "ci",
+        "status": "pass"
+      },
+      {
+        "t": 1,
+        "op": "attempt"
+      },
+      {
+        "t": 2,
+        "op": "review",
+        "outcome": "approve",
+        "reviewer": "maintainer",
+        "qualified": true
+      },
+      {
+        "t": 3,
+        "op": "settings",
+        "capacity": 0,
+        "review_ttl": 1
+      },
+      {
+        "t": 4,
+        "op": "settings",
+        "review_ttl": 6
+      },
+      {
+        "t": 5,
+        "op": "attempt"
+      },
+      {
+        "t": 8,
+        "op": "attempt"
+      }
+    ]
+  },
+  {
+    "id": "H22",
+    "family": "deadline_extension_repair_after_retry",
+    "split": "test",
+    "description": "Дедлайн змінюється під час workflow з відмовою й подальшим її усуненням.",
+    "events": [
+      {
+        "t": 0,
+        "op": "settings",
+        "review_required": false,
+        "deadline": 2
+      },
+      {
+        "t": 0,
+        "op": "ci",
+        "status": "pass"
+      },
+      {
+        "t": 0,
+        "op": "failure",
+        "active": true
+      },
+      {
+        "t": 1,
+        "op": "attempt"
+      },
+      {
+        "t": 2,
+        "op": "failure",
+        "active": false
+      },
+      {
+        "t": 3,
+        "op": "settings",
+        "deadline": 8
+      },
+      {
+        "t": 4,
+        "op": "attempt"
+      },
+      {
+        "t": 8,
+        "op": "attempt"
+      }
+    ]
+  },
+  {
+    "id": "H23",
+    "family": "pending_queue_roundtrip_qualified_response",
+    "split": "test",
+    "description": "Черга збільшується й відновлюється протягом очікування кваліфікованої відповіді.",
+    "events": [
+      {
+        "t": 0,
+        "op": "ci",
+        "status": "pass"
+      },
+      {
+        "t": 1,
+        "op": "attempt"
+      },
+      {
+        "t": 2,
+        "op": "settings",
+        "queue": 1,
+        "capacity": 1
+      },
+      {
+        "t": 3,
+        "op": "review",
+        "outcome": "approve",
+        "reviewer": "maintainer",
+        "qualified": false
+      },
+      {
+        "t": 4,
+        "op": "settings",
+        "queue": 0
+      },
+      {
+        "t": 5,
+        "op": "review",
+        "outcome": "approve",
+        "reviewer": "maintainer",
+        "qualified": true
+      },
+      {
+        "t": 6,
+        "op": "attempt"
+      },
+      {
+        "t": 7,
+        "op": "attempt"
+      }
+    ]
+  },
+  {
+    "id": "H24",
+    "family": "base_input_aba_revalidation_sequence",
+    "split": "test",
+    "description": "База й вхідні дані повертаються до початкової пари перед новими перевірками.",
+    "events": [
+      {
+        "t": 0,
+        "op": "ci",
+        "status": "pass"
+      },
+      {
+        "t": 1,
+        "op": "attempt"
+      },
+      {
+        "t": 2,
+        "op": "review",
+        "outcome": "approve",
+        "reviewer": "maintainer",
+        "qualified": true
+      },
+      {
+        "t": 3,
+        "op": "change",
+        "base": "b2",
+        "input": "i2"
+      },
+      {
+        "t": 4,
+        "op": "change",
+        "base": "b1",
+        "input": "i1"
+      },
+      {
+        "t": 5,
+        "op": "settings",
+        "review_required": false
+      },
+      {
+        "t": 6,
+        "op": "ci",
+        "status": "fail"
+      },
+      {
+        "t": 7,
+        "op": "attempt"
+      },
+      {
+        "t": 8,
+        "op": "ci",
+        "status": "pass"
+      },
+      {
+        "t": 9,
+        "op": "attempt"
+      }
+    ]
+  }
+]

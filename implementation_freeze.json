@@ -1,0 +1,12 @@
+{
+  "recorded_at": "2026-09-23T12:01:15.455712+00:00",
+  "files": {
+    "POLICY.md": "2487f2e2429e4819ed2776e4819bda7265fc81639f8b361985f316c98bc358f6",
+    "PROTOCOL.md": "f88a800631ddfba1a08dc592da548d3707b3706f6e0a67a13ae86d3768fff587",
+    "rac.py": "1a290e1cf2a19894282cba6d299214d0fb1f17b3ec7b9697ccaa8d3f323616f0",
+    "baseline.py": "e31cb9a54f3732ab10b1bfab112f7b5f3924825cb4aee99bbdda80be39a246bb",
+    "dev.json": "dfd051b25c53f3a8780745c41137a9da6cf7f45a69bd6c570a7ca1ab52157ff8",
+    "development_check.py": "427b44c8fc404e28aee510a69074485067350511a648c15c0df8e7f616a02568",
+    "evaluate.py": "2d880febd6ecc9e9ff8ca7f59ab2adefc4d2b621d0bb2431a4651a9c787708f2"
+  }
+}

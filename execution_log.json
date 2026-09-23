@@ -1,0 +1,3314 @@
+{
+  "rac": {
+    "H01": {
+      "decisions": [
+        {
+          "attempt": 1,
+          "t": 1,
+          "label": "review",
+          "transition": "escalate",
+          "queue": 0
+        },
+        {
+          "attempt": 2,
+          "t": 5,
+          "label": "review",
+          "transition": "escalate",
+          "queue": 0
+        },
+        {
+          "attempt": 3,
+          "t": 8,
+          "label": "allow",
+          "transition": "act",
+          "queue": 0
+        }
+      ],
+      "log": [
+        {
+          "event": "review_request",
+          "t": 1,
+          "epoch": 0
+        },
+        {
+          "event": "decision",
+          "t": 1,
+          "attempt": 1,
+          "label": "review",
+          "transition": "escalate",
+          "queue": 0
+        },
+        {
+          "event": "review_complete",
+          "t": 2,
+          "outcome": "approve",
+          "delay": 1
+        },
+        {
+          "event": "review_request",
+          "t": 5,
+          "epoch": 1
+        },
+        {
+          "event": "decision",
+          "t": 5,
+          "attempt": 2,
+          "label": "review",
+          "transition": "escalate",
+          "queue": 0
+        },
+        {
+          "event": "review_complete",
+          "t": 6,
+          "outcome": "approve",
+          "delay": 1
+        },
+        {
+          "event": "release",
+          "t": 8
+        },
+        {
+          "event": "decision",
+          "t": 8,
+          "attempt": 3,
+          "label": "allow",
+          "transition": "act",
+          "queue": 0
+        }
+      ]
+    },
+    "H02": {
+      "decisions": [
+        {
+          "attempt": 1,
+          "t": 2,
+          "label": "review",
+          "transition": "escalate",
+          "queue": 0
+        },
+        {
+          "attempt": 2,
+          "t": 12,
+          "label": "allow",
+          "transition": "act",
+          "queue": 0
+        },
+        {
+          "attempt": 3,
+          "t": 20,
+          "label": "allow",
+          "transition": "act",
+          "queue": 0
+        }
+      ],
+      "log": [
+        {
+          "event": "review_request",
+          "t": 2,
+          "epoch": 0
+        },
+        {
+          "event": "decision",
+          "t": 2,
+          "attempt": 1,
+          "label": "review",
+          "transition": "escalate",
+          "queue": 0
+        },
+        {
+          "event": "review_complete",
+          "t": 12,
+          "outcome": "approve",
+          "delay": 10
+        },
+        {
+          "event": "release",
+          "t": 12
+        },
+        {
+          "event": "decision",
+          "t": 12,
+          "attempt": 2,
+          "label": "allow",
+          "transition": "act",
+          "queue": 0
+        },
+        {
+          "event": "release",
+          "t": 20
+        },
+        {
+          "event": "decision",
+          "t": 20,
+          "attempt": 3,
+          "label": "allow",
+          "transition": "act",
+          "queue": 0
+        }
+      ]
+    },
+    "H03": {
+      "decisions": [
+        {
+          "attempt": 1,
+          "t": 1,
+          "label": "review",
+          "transition": "escalate",
+          "queue": 0
+        },
+        {
+          "attempt": 2,
+          "t": 4,
+          "label": "review",
+          "transition": "escalate",
+          "queue": 0
+        },
+        {
+          "attempt": 3,
+          "t": 6,
+          "label": "allow",
+          "transition": "act",
+          "queue": 0
+        }
+      ],
+      "log": [
+        {
+          "event": "review_request",
+          "t": 1,
+          "epoch": 0
+        },
+        {
+          "event": "decision",
+          "t": 1,
+          "attempt": 1,
+          "label": "review",
+          "transition": "escalate",
+          "queue": 0
+        },
+        {
+          "event": "review_complete",
+          "t": 2,
+          "outcome": "approve",
+          "delay": 1
+        },
+        {
+          "event": "review_request",
+          "t": 4,
+          "epoch": 0
+        },
+        {
+          "event": "decision",
+          "t": 4,
+          "attempt": 2,
+          "label": "review",
+          "transition": "escalate",
+          "queue": 0
+        },
+        {
+          "event": "review_complete",
+          "t": 5,
+          "outcome": "approve",
+          "delay": 1
+        },
+        {
+          "event": "release",
+          "t": 6
+        },
+        {
+          "event": "decision",
+          "t": 6,
+          "attempt": 3,
+          "label": "allow",
+          "transition": "act",
+          "queue": 0
+        }
+      ]
+    },
+    "H04": {
+      "decisions": [
+        {
+          "attempt": 1,
+          "t": 1,
+          "label": "review",
+          "transition": "escalate",
+          "queue": 0
+        },
+        {
+          "attempt": 2,
+          "t": 5,
+          "label": "review",
+          "transition": "escalate",
+          "queue": 0
+        },
+        {
+          "attempt": 3,
+          "t": 7,
+          "label": "allow",
+          "transition": "act",
+          "queue": 0
+        }
+      ],
+      "log": [
+        {
+          "event": "review_request",
+          "t": 1,
+          "epoch": 0
+        },
+        {
+          "event": "decision",
+          "t": 1,
+          "attempt": 1,
+          "label": "review",
+          "transition": "escalate",
+          "queue": 0
+        },
+        {
+          "event": "review_complete",
+          "t": 2,
+          "outcome": "reject",
+          "delay": 1
+        },
+        {
+          "event": "review_request",
+          "t": 5,
+          "epoch": 1
+        },
+        {
+          "event": "decision",
+          "t": 5,
+          "attempt": 2,
+          "label": "review",
+          "transition": "escalate",
+          "queue": 0
+        },
+        {
+          "event": "review_complete",
+          "t": 6,
+          "outcome": "approve",
+          "delay": 1
+        },
+        {
+          "event": "release",
+          "t": 7
+        },
+        {
+          "event": "decision",
+          "t": 7,
+          "attempt": 3,
+          "label": "allow",
+          "transition": "act",
+          "queue": 0
+        }
+      ]
+    },
+    "H05": {
+      "decisions": [
+        {
+          "attempt": 1,
+          "t": 1,
+          "label": "review",
+          "transition": "escalate",
+          "queue": 0
+        },
+        {
+          "attempt": 2,
+          "t": 12,
+          "label": "allow",
+          "transition": "act",
+          "queue": 0
+        },
+        {
+          "attempt": 3,
+          "t": 13,
+          "label": "review",
+          "transition": "escalate",
+          "queue": 0
+        }
+      ],
+      "log": [
+        {
+          "event": "review_request",
+          "t": 1,
+          "epoch": 0
+        },
+        {
+          "event": "decision",
+          "t": 1,
+          "attempt": 1,
+          "label": "review",
+          "transition": "escalate",
+          "queue": 0
+        },
+        {
+          "event": "review_complete",
+          "t": 2,
+          "outcome": "approve",
+          "delay": 1
+        },
+        {
+          "event": "release",
+          "t": 12
+        },
+        {
+          "event": "decision",
+          "t": 12,
+          "attempt": 2,
+          "label": "allow",
+          "transition": "act",
+          "queue": 0
+        },
+        {
+          "event": "review_request",
+          "t": 13,
+          "epoch": 0
+        },
+        {
+          "event": "decision",
+          "t": 13,
+          "attempt": 3,
+          "label": "review",
+          "transition": "escalate",
+          "queue": 0
+        }
+      ]
+    },
+    "H06": {
+      "decisions": [
+        {
+          "attempt": 1,
+          "t": 1,
+          "label": "review",
+          "transition": "escalate",
+          "queue": 0
+        },
+        {
+          "attempt": 2,
+          "t": 6,
+          "label": "allow",
+          "transition": "act",
+          "queue": 4
+        },
+        {
+          "attempt": 3,
+          "t": 7,
+          "label": "block",
+          "transition": "stop",
+          "queue": 4
+        }
+      ],
+      "log": [
+        {
+          "event": "review_request",
+          "t": 1,
+          "epoch": 0
+        },
+        {
+          "event": "decision",
+          "t": 1,
+          "attempt": 1,
+          "label": "review",
+          "transition": "escalate",
+          "queue": 0
+        },
+        {
+          "event": "review_complete",
+          "t": 6,
+          "outcome": "approve",
+          "delay": 5
+        },
+        {
+          "event": "release",
+          "t": 6
+        },
+        {
+          "event": "decision",
+          "t": 6,
+          "attempt": 2,
+          "label": "allow",
+          "transition": "act",
+          "queue": 4
+        },
+        {
+          "event": "decision",
+          "t": 7,
+          "attempt": 3,
+          "label": "block",
+          "transition": "stop",
+          "queue": 4
+        }
+      ]
+    },
+    "H07": {
+      "decisions": [
+        {
+          "attempt": 1,
+          "t": 1,
+          "label": "review",
+          "transition": "escalate",
+          "queue": 0
+        },
+        {
+          "attempt": 2,
+          "t": 4,
+          "label": "review",
+          "transition": "escalate",
+          "queue": 0
+        },
+        {
+          "attempt": 3,
+          "t": 6,
+          "label": "allow",
+          "transition": "act",
+          "queue": 0
+        }
+      ],
+      "log": [
+        {
+          "event": "review_request",
+          "t": 1,
+          "epoch": 1
+        },
+        {
+          "event": "decision",
+          "t": 1,
+          "attempt": 1,
+          "label": "review",
+          "transition": "escalate",
+          "queue": 0
+        },
+        {
+          "event": "invalid_review",
+          "t": 2,
+          "outcome": "approve"
+        },
+        {
+          "event": "invalid_review",
+          "t": 3,
+          "outcome": "approve"
+        },
+        {
+          "event": "decision",
+          "t": 4,
+          "attempt": 2,
+          "label": "review",
+          "transition": "escalate",
+          "queue": 0
+        },
+        {
+          "event": "review_complete",
+          "t": 5,
+          "outcome": "approve",
+          "delay": 4
+        },
+        {
+          "event": "release",
+          "t": 6
+        },
+        {
+          "event": "decision",
+          "t": 6,
+          "attempt": 3,
+          "label": "allow",
+          "transition": "act",
+          "queue": 0
+        }
+      ]
+    },
+    "H08": {
+      "decisions": [
+        {
+          "attempt": 1,
+          "t": 1,
+          "label": "review",
+          "transition": "escalate",
+          "queue": 0
+        },
+        {
+          "attempt": 2,
+          "t": 6,
+          "label": "block",
+          "transition": "verify",
+          "queue": 0
+        },
+        {
+          "attempt": 3,
+          "t": 8,
+          "label": "allow",
+          "transition": "act",
+          "queue": 0
+        }
+      ],
+      "log": [
+        {
+          "event": "review_request",
+          "t": 1,
+          "epoch": 0
+        },
+        {
+          "event": "decision",
+          "t": 1,
+          "attempt": 1,
+          "label": "review",
+          "transition": "escalate",
+          "queue": 0
+        },
+        {
+          "event": "review_complete",
+          "t": 2,
+          "outcome": "approve",
+          "delay": 1
+        },
+        {
+          "event": "decision",
+          "t": 6,
+          "attempt": 2,
+          "label": "block",
+          "transition": "verify",
+          "queue": 0
+        },
+        {
+          "event": "release",
+          "t": 8
+        },
+        {
+          "event": "decision",
+          "t": 8,
+          "attempt": 3,
+          "label": "allow",
+          "transition": "act",
+          "queue": 0
+        }
+      ]
+    },
+    "H09": {
+      "decisions": [
+        {
+          "attempt": 1,
+          "t": 1,
+          "label": "block",
+          "transition": "verify",
+          "queue": 0
+        },
+        {
+          "attempt": 2,
+          "t": 3,
+          "label": "block",
+          "transition": "verify",
+          "queue": 0
+        },
+        {
+          "attempt": 3,
+          "t": 5,
+          "label": "allow",
+          "transition": "act",
+          "queue": 0
+        }
+      ],
+      "log": [
+        {
+          "event": "decision",
+          "t": 1,
+          "attempt": 1,
+          "label": "block",
+          "transition": "verify",
+          "queue": 0
+        },
+        {
+          "event": "decision",
+          "t": 3,
+          "attempt": 2,
+          "label": "block",
+          "transition": "verify",
+          "queue": 0
+        },
+        {
+          "event": "release",
+          "t": 5
+        },
+        {
+          "event": "decision",
+          "t": 5,
+          "attempt": 3,
+          "label": "allow",
+          "transition": "act",
+          "queue": 0
+        }
+      ]
+    },
+    "H10": {
+      "decisions": [
+        {
+          "attempt": 1,
+          "t": 1,
+          "label": "block",
+          "transition": "retry",
+          "queue": 0
+        },
+        {
+          "attempt": 2,
+          "t": 2,
+          "label": "block",
+          "transition": "stop",
+          "queue": 0
+        },
+        {
+          "attempt": 3,
+          "t": 4,
+          "label": "allow",
+          "transition": "act",
+          "queue": 0
+        }
+      ],
+      "log": [
+        {
+          "event": "retry",
+          "t": 1,
+          "remaining": 0
+        },
+        {
+          "event": "decision",
+          "t": 1,
+          "attempt": 1,
+          "label": "block",
+          "transition": "retry",
+          "queue": 0
+        },
+        {
+          "event": "decision",
+          "t": 2,
+          "attempt": 2,
+          "label": "block",
+          "transition": "stop",
+          "queue": 0
+        },
+        {
+          "event": "release",
+          "t": 4
+        },
+        {
+          "event": "decision",
+          "t": 4,
+          "attempt": 3,
+          "label": "allow",
+          "transition": "act",
+          "queue": 0
+        }
+      ]
+    },
+    "H11": {
+      "decisions": [
+        {
+          "attempt": 1,
+          "t": 1,
+          "label": "review",
+          "transition": "escalate",
+          "queue": 0
+        },
+        {
+          "attempt": 2,
+          "t": 3,
+          "label": "review",
+          "transition": "escalate",
+          "queue": 0
+        },
+        {
+          "attempt": 3,
+          "t": 5,
+          "label": "allow",
+          "transition": "act",
+          "queue": 0
+        }
+      ],
+      "log": [
+        {
+          "event": "review_request",
+          "t": 1,
+          "epoch": 0
+        },
+        {
+          "event": "decision",
+          "t": 1,
+          "attempt": 1,
+          "label": "review",
+          "transition": "escalate",
+          "queue": 0
+        },
+        {
+          "event": "decision",
+          "t": 3,
+          "attempt": 2,
+          "label": "review",
+          "transition": "escalate",
+          "queue": 0
+        },
+        {
+          "event": "review_complete",
+          "t": 4,
+          "outcome": "approve",
+          "delay": 3
+        },
+        {
+          "event": "release",
+          "t": 5
+        },
+        {
+          "event": "decision",
+          "t": 5,
+          "attempt": 3,
+          "label": "allow",
+          "transition": "act",
+          "queue": 0
+        }
+      ]
+    },
+    "H12": {
+      "decisions": [
+        {
+          "attempt": 1,
+          "t": 2,
+          "label": "review",
+          "transition": "escalate",
+          "queue": 0
+        },
+        {
+          "attempt": 2,
+          "t": 5,
+          "label": "allow",
+          "transition": "act",
+          "queue": 0
+        },
+        {
+          "attempt": 3,
+          "t": 6,
+          "label": "allow",
+          "transition": "act",
+          "queue": 0
+        }
+      ],
+      "log": [
+        {
+          "event": "review_request",
+          "t": 2,
+          "epoch": 1
+        },
+        {
+          "event": "decision",
+          "t": 2,
+          "attempt": 1,
+          "label": "review",
+          "transition": "escalate",
+          "queue": 0
+        },
+        {
+          "event": "review_complete",
+          "t": 3,
+          "outcome": "approve",
+          "delay": 1
+        },
+        {
+          "event": "release",
+          "t": 5
+        },
+        {
+          "event": "decision",
+          "t": 5,
+          "attempt": 2,
+          "label": "allow",
+          "transition": "act",
+          "queue": 0
+        },
+        {
+          "event": "release",
+          "t": 6
+        },
+        {
+          "event": "decision",
+          "t": 6,
+          "attempt": 3,
+          "label": "allow",
+          "transition": "act",
+          "queue": 0
+        }
+      ]
+    },
+    "H13": {
+      "decisions": [
+        {
+          "attempt": 1,
+          "t": 1,
+          "label": "review",
+          "transition": "escalate",
+          "queue": 0
+        },
+        {
+          "attempt": 2,
+          "t": 6,
+          "label": "review",
+          "transition": "escalate",
+          "queue": 0
+        },
+        {
+          "attempt": 3,
+          "t": 8,
+          "label": "allow",
+          "transition": "act",
+          "queue": 0
+        }
+      ],
+      "log": [
+        {
+          "event": "review_request",
+          "t": 1,
+          "epoch": 0
+        },
+        {
+          "event": "decision",
+          "t": 1,
+          "attempt": 1,
+          "label": "review",
+          "transition": "escalate",
+          "queue": 0
+        },
+        {
+          "event": "invalid_review",
+          "t": 5,
+          "outcome": "approve"
+        },
+        {
+          "event": "review_request",
+          "t": 6,
+          "epoch": 2
+        },
+        {
+          "event": "decision",
+          "t": 6,
+          "attempt": 2,
+          "label": "review",
+          "transition": "escalate",
+          "queue": 0
+        },
+        {
+          "event": "review_complete",
+          "t": 7,
+          "outcome": "approve",
+          "delay": 1
+        },
+        {
+          "event": "release",
+          "t": 8
+        },
+        {
+          "event": "decision",
+          "t": 8,
+          "attempt": 3,
+          "label": "allow",
+          "transition": "act",
+          "queue": 0
+        }
+      ]
+    },
+    "H14": {
+      "decisions": [
+        {
+          "attempt": 1,
+          "t": 1,
+          "label": "review",
+          "transition": "escalate",
+          "queue": 0
+        },
+        {
+          "attempt": 2,
+          "t": 4,
+          "label": "block",
+          "transition": "stop",
+          "queue": 0
+        },
+        {
+          "attempt": 3,
+          "t": 6,
+          "label": "allow",
+          "transition": "act",
+          "queue": 0
+        }
+      ],
+      "log": [
+        {
+          "event": "review_request",
+          "t": 1,
+          "epoch": 0
+        },
+        {
+          "event": "decision",
+          "t": 1,
+          "attempt": 1,
+          "label": "review",
+          "transition": "escalate",
+          "queue": 0
+        },
+        {
+          "event": "review_complete",
+          "t": 2,
+          "outcome": "approve",
+          "delay": 1
+        },
+        {
+          "event": "decision",
+          "t": 4,
+          "attempt": 2,
+          "label": "block",
+          "transition": "stop",
+          "queue": 0
+        },
+        {
+          "event": "release",
+          "t": 6
+        },
+        {
+          "event": "decision",
+          "t": 6,
+          "attempt": 3,
+          "label": "allow",
+          "transition": "act",
+          "queue": 0
+        }
+      ]
+    },
+    "H15": {
+      "decisions": [
+        {
+          "attempt": 1,
+          "t": 1,
+          "label": "review",
+          "transition": "escalate",
+          "queue": 0
+        },
+        {
+          "attempt": 2,
+          "t": 4,
+          "label": "block",
+          "transition": "switch",
+          "queue": 0
+        },
+        {
+          "attempt": 3,
+          "t": 6,
+          "label": "allow",
+          "transition": "act",
+          "queue": 3
+        }
+      ],
+      "log": [
+        {
+          "event": "review_request",
+          "t": 1,
+          "epoch": 0
+        },
+        {
+          "event": "decision",
+          "t": 1,
+          "attempt": 1,
+          "label": "review",
+          "transition": "escalate",
+          "queue": 0
+        },
+        {
+          "event": "review_complete",
+          "t": 2,
+          "outcome": "approve",
+          "delay": 1
+        },
+        {
+          "event": "decision",
+          "t": 4,
+          "attempt": 2,
+          "label": "block",
+          "transition": "switch",
+          "queue": 0
+        },
+        {
+          "event": "release",
+          "t": 6
+        },
+        {
+          "event": "decision",
+          "t": 6,
+          "attempt": 3,
+          "label": "allow",
+          "transition": "act",
+          "queue": 3
+        }
+      ]
+    },
+    "H16": {
+      "decisions": [
+        {
+          "attempt": 1,
+          "t": 1,
+          "label": "review",
+          "transition": "escalate",
+          "queue": 0
+        },
+        {
+          "attempt": 2,
+          "t": 6,
+          "label": "review",
+          "transition": "escalate",
+          "queue": 0
+        },
+        {
+          "attempt": 3,
+          "t": 8,
+          "label": "allow",
+          "transition": "act",
+          "queue": 0
+        }
+      ],
+      "log": [
+        {
+          "event": "review_request",
+          "t": 1,
+          "epoch": 0
+        },
+        {
+          "event": "decision",
+          "t": 1,
+          "attempt": 1,
+          "label": "review",
+          "transition": "escalate",
+          "queue": 0
+        },
+        {
+          "event": "invalid_review",
+          "t": 5,
+          "outcome": "approve"
+        },
+        {
+          "event": "review_request",
+          "t": 6,
+          "epoch": 0
+        },
+        {
+          "event": "decision",
+          "t": 6,
+          "attempt": 2,
+          "label": "review",
+          "transition": "escalate",
+          "queue": 0
+        },
+        {
+          "event": "review_complete",
+          "t": 7,
+          "outcome": "approve",
+          "delay": 1
+        },
+        {
+          "event": "release",
+          "t": 8
+        },
+        {
+          "event": "decision",
+          "t": 8,
+          "attempt": 3,
+          "label": "allow",
+          "transition": "act",
+          "queue": 0
+        }
+      ]
+    },
+    "H17": {
+      "decisions": [
+        {
+          "attempt": 1,
+          "t": 1,
+          "label": "review",
+          "transition": "escalate",
+          "queue": 0
+        },
+        {
+          "attempt": 2,
+          "t": 7,
+          "label": "allow",
+          "transition": "act",
+          "queue": 8
+        },
+        {
+          "attempt": 3,
+          "t": 10,
+          "label": "allow",
+          "transition": "act",
+          "queue": 8
+        }
+      ],
+      "log": [
+        {
+          "event": "review_request",
+          "t": 1,
+          "epoch": 0
+        },
+        {
+          "event": "decision",
+          "t": 1,
+          "attempt": 1,
+          "label": "review",
+          "transition": "escalate",
+          "queue": 0
+        },
+        {
+          "event": "review_complete",
+          "t": 2,
+          "outcome": "approve",
+          "delay": 1
+        },
+        {
+          "event": "release",
+          "t": 7
+        },
+        {
+          "event": "decision",
+          "t": 7,
+          "attempt": 2,
+          "label": "allow",
+          "transition": "act",
+          "queue": 8
+        },
+        {
+          "event": "release",
+          "t": 10
+        },
+        {
+          "event": "decision",
+          "t": 10,
+          "attempt": 3,
+          "label": "allow",
+          "transition": "act",
+          "queue": 8
+        }
+      ]
+    },
+    "H18": {
+      "decisions": [
+        {
+          "attempt": 1,
+          "t": 1,
+          "label": "review",
+          "transition": "escalate",
+          "queue": 0
+        },
+        {
+          "attempt": 2,
+          "t": 4,
+          "label": "block",
+          "transition": "stop",
+          "queue": 0
+        },
+        {
+          "attempt": 3,
+          "t": 6,
+          "label": "allow",
+          "transition": "act",
+          "queue": 0
+        }
+      ],
+      "log": [
+        {
+          "event": "review_request",
+          "t": 1,
+          "epoch": 0
+        },
+        {
+          "event": "decision",
+          "t": 1,
+          "attempt": 1,
+          "label": "review",
+          "transition": "escalate",
+          "queue": 0
+        },
+        {
+          "event": "review_complete",
+          "t": 2,
+          "outcome": "reject",
+          "delay": 1
+        },
+        {
+          "event": "decision",
+          "t": 4,
+          "attempt": 2,
+          "label": "block",
+          "transition": "stop",
+          "queue": 0
+        },
+        {
+          "event": "release",
+          "t": 6
+        },
+        {
+          "event": "decision",
+          "t": 6,
+          "attempt": 3,
+          "label": "allow",
+          "transition": "act",
+          "queue": 0
+        }
+      ]
+    },
+    "H19": {
+      "decisions": [
+        {
+          "attempt": 1,
+          "t": 1,
+          "label": "review",
+          "transition": "escalate",
+          "queue": 0
+        },
+        {
+          "attempt": 2,
+          "t": 5,
+          "label": "review",
+          "transition": "escalate",
+          "queue": 0
+        },
+        {
+          "attempt": 3,
+          "t": 7,
+          "label": "allow",
+          "transition": "act",
+          "queue": 0
+        }
+      ],
+      "log": [
+        {
+          "event": "review_request",
+          "t": 1,
+          "epoch": 0
+        },
+        {
+          "event": "decision",
+          "t": 1,
+          "attempt": 1,
+          "label": "review",
+          "transition": "escalate",
+          "queue": 0
+        },
+        {
+          "event": "review_complete",
+          "t": 2,
+          "outcome": "approve",
+          "delay": 1
+        },
+        {
+          "event": "review_request",
+          "t": 5,
+          "epoch": 1
+        },
+        {
+          "event": "decision",
+          "t": 5,
+          "attempt": 2,
+          "label": "review",
+          "transition": "escalate",
+          "queue": 0
+        },
+        {
+          "event": "review_complete",
+          "t": 6,
+          "outcome": "approve",
+          "delay": 1
+        },
+        {
+          "event": "release",
+          "t": 7
+        },
+        {
+          "event": "decision",
+          "t": 7,
+          "attempt": 3,
+          "label": "allow",
+          "transition": "act",
+          "queue": 0
+        }
+      ]
+    },
+    "H20": {
+      "decisions": [
+        {
+          "attempt": 1,
+          "t": 1,
+          "label": "review",
+          "transition": "escalate",
+          "queue": 0
+        },
+        {
+          "attempt": 2,
+          "t": 4,
+          "label": "block",
+          "transition": "verify",
+          "queue": 0
+        },
+        {
+          "attempt": 3,
+          "t": 6,
+          "label": "allow",
+          "transition": "act",
+          "queue": 0
+        }
+      ],
+      "log": [
+        {
+          "event": "review_request",
+          "t": 1,
+          "epoch": 0
+        },
+        {
+          "event": "decision",
+          "t": 1,
+          "attempt": 1,
+          "label": "review",
+          "transition": "escalate",
+          "queue": 0
+        },
+        {
+          "event": "review_complete",
+          "t": 2,
+          "outcome": "approve",
+          "delay": 1
+        },
+        {
+          "event": "decision",
+          "t": 4,
+          "attempt": 2,
+          "label": "block",
+          "transition": "verify",
+          "queue": 0
+        },
+        {
+          "event": "release",
+          "t": 6
+        },
+        {
+          "event": "decision",
+          "t": 6,
+          "attempt": 3,
+          "label": "allow",
+          "transition": "act",
+          "queue": 0
+        }
+      ]
+    },
+    "H21": {
+      "decisions": [
+        {
+          "attempt": 1,
+          "t": 1,
+          "label": "review",
+          "transition": "escalate",
+          "queue": 0
+        },
+        {
+          "attempt": 2,
+          "t": 5,
+          "label": "allow",
+          "transition": "act",
+          "queue": 0
+        },
+        {
+          "attempt": 3,
+          "t": 8,
+          "label": "allow",
+          "transition": "act",
+          "queue": 0
+        }
+      ],
+      "log": [
+        {
+          "event": "review_request",
+          "t": 1,
+          "epoch": 0
+        },
+        {
+          "event": "decision",
+          "t": 1,
+          "attempt": 1,
+          "label": "review",
+          "transition": "escalate",
+          "queue": 0
+        },
+        {
+          "event": "review_complete",
+          "t": 2,
+          "outcome": "approve",
+          "delay": 1
+        },
+        {
+          "event": "release",
+          "t": 5
+        },
+        {
+          "event": "decision",
+          "t": 5,
+          "attempt": 2,
+          "label": "allow",
+          "transition": "act",
+          "queue": 0
+        },
+        {
+          "event": "release",
+          "t": 8
+        },
+        {
+          "event": "decision",
+          "t": 8,
+          "attempt": 3,
+          "label": "allow",
+          "transition": "act",
+          "queue": 0
+        }
+      ]
+    },
+    "H22": {
+      "decisions": [
+        {
+          "attempt": 1,
+          "t": 1,
+          "label": "block",
+          "transition": "retry",
+          "queue": 0
+        },
+        {
+          "attempt": 2,
+          "t": 4,
+          "label": "allow",
+          "transition": "act",
+          "queue": 0
+        },
+        {
+          "attempt": 3,
+          "t": 8,
+          "label": "allow",
+          "transition": "act",
+          "queue": 0
+        }
+      ],
+      "log": [
+        {
+          "event": "retry",
+          "t": 1,
+          "remaining": 0
+        },
+        {
+          "event": "decision",
+          "t": 1,
+          "attempt": 1,
+          "label": "block",
+          "transition": "retry",
+          "queue": 0
+        },
+        {
+          "event": "release",
+          "t": 4
+        },
+        {
+          "event": "decision",
+          "t": 4,
+          "attempt": 2,
+          "label": "allow",
+          "transition": "act",
+          "queue": 0
+        },
+        {
+          "event": "release",
+          "t": 8
+        },
+        {
+          "event": "decision",
+          "t": 8,
+          "attempt": 3,
+          "label": "allow",
+          "transition": "act",
+          "queue": 0
+        }
+      ]
+    },
+    "H23": {
+      "decisions": [
+        {
+          "attempt": 1,
+          "t": 1,
+          "label": "review",
+          "transition": "escalate",
+          "queue": 0
+        },
+        {
+          "attempt": 2,
+          "t": 6,
+          "label": "allow",
+          "transition": "act",
+          "queue": 0
+        },
+        {
+          "attempt": 3,
+          "t": 7,
+          "label": "allow",
+          "transition": "act",
+          "queue": 0
+        }
+      ],
+      "log": [
+        {
+          "event": "review_request",
+          "t": 1,
+          "epoch": 0
+        },
+        {
+          "event": "decision",
+          "t": 1,
+          "attempt": 1,
+          "label": "review",
+          "transition": "escalate",
+          "queue": 0
+        },
+        {
+          "event": "invalid_review",
+          "t": 3,
+          "outcome": "approve"
+        },
+        {
+          "event": "review_complete",
+          "t": 5,
+          "outcome": "approve",
+          "delay": 4
+        },
+        {
+          "event": "release",
+          "t": 6
+        },
+        {
+          "event": "decision",
+          "t": 6,
+          "attempt": 2,
+          "label": "allow",
+          "transition": "act",
+          "queue": 0
+        },
+        {
+          "event": "release",
+          "t": 7
+        },
+        {
+          "event": "decision",
+          "t": 7,
+          "attempt": 3,
+          "label": "allow",
+          "transition": "act",
+          "queue": 0
+        }
+      ]
+    },
+    "H24": {
+      "decisions": [
+        {
+          "attempt": 1,
+          "t": 1,
+          "label": "review",
+          "transition": "escalate",
+          "queue": 0
+        },
+        {
+          "attempt": 2,
+          "t": 7,
+          "label": "block",
+          "transition": "verify",
+          "queue": 0
+        },
+        {
+          "attempt": 3,
+          "t": 9,
+          "label": "allow",
+          "transition": "act",
+          "queue": 0
+        }
+      ],
+      "log": [
+        {
+          "event": "review_request",
+          "t": 1,
+          "epoch": 0
+        },
+        {
+          "event": "decision",
+          "t": 1,
+          "attempt": 1,
+          "label": "review",
+          "transition": "escalate",
+          "queue": 0
+        },
+        {
+          "event": "review_complete",
+          "t": 2,
+          "outcome": "approve",
+          "delay": 1
+        },
+        {
+          "event": "decision",
+          "t": 7,
+          "attempt": 2,
+          "label": "block",
+          "transition": "verify",
+          "queue": 0
+        },
+        {
+          "event": "release",
+          "t": 9
+        },
+        {
+          "event": "decision",
+          "t": 9,
+          "attempt": 3,
+          "label": "allow",
+          "transition": "act",
+          "queue": 0
+        }
+      ]
+    }
+  },
+  "stateful_baseline": {
+    "H01": {
+      "decisions": [
+        {
+          "attempt": 1,
+          "t": 1,
+          "label": "review",
+          "transition": "escalate",
+          "queue": 0
+        },
+        {
+          "attempt": 2,
+          "t": 5,
+          "label": "review",
+          "transition": "escalate",
+          "queue": 0
+        },
+        {
+          "attempt": 3,
+          "t": 8,
+          "label": "allow",
+          "transition": "act",
+          "queue": 0
+        }
+      ],
+      "log": [
+        {
+          "event": "decision",
+          "t": 1,
+          "attempt": 1,
+          "label": "review",
+          "transition": "escalate",
+          "queue": 0
+        },
+        {
+          "event": "review_request",
+          "t": 1
+        },
+        {
+          "event": "review_complete",
+          "t": 2,
+          "outcome": "approve",
+          "delay": 1
+        },
+        {
+          "event": "decision",
+          "t": 5,
+          "attempt": 2,
+          "label": "review",
+          "transition": "escalate",
+          "queue": 0
+        },
+        {
+          "event": "review_request",
+          "t": 5
+        },
+        {
+          "event": "review_complete",
+          "t": 6,
+          "outcome": "approve",
+          "delay": 1
+        },
+        {
+          "event": "decision",
+          "t": 8,
+          "attempt": 3,
+          "label": "allow",
+          "transition": "act",
+          "queue": 0
+        },
+        {
+          "event": "release",
+          "t": 8
+        }
+      ]
+    },
+    "H02": {
+      "decisions": [
+        {
+          "attempt": 1,
+          "t": 2,
+          "label": "review",
+          "transition": "escalate",
+          "queue": 0
+        },
+        {
+          "attempt": 2,
+          "t": 12,
+          "label": "allow",
+          "transition": "act",
+          "queue": 0
+        },
+        {
+          "attempt": 3,
+          "t": 20,
+          "label": "allow",
+          "transition": "act",
+          "queue": 0
+        }
+      ],
+      "log": [
+        {
+          "event": "decision",
+          "t": 2,
+          "attempt": 1,
+          "label": "review",
+          "transition": "escalate",
+          "queue": 0
+        },
+        {
+          "event": "review_request",
+          "t": 2
+        },
+        {
+          "event": "review_complete",
+          "t": 12,
+          "outcome": "approve",
+          "delay": 10
+        },
+        {
+          "event": "decision",
+          "t": 12,
+          "attempt": 2,
+          "label": "allow",
+          "transition": "act",
+          "queue": 0
+        },
+        {
+          "event": "release",
+          "t": 12
+        },
+        {
+          "event": "decision",
+          "t": 20,
+          "attempt": 3,
+          "label": "allow",
+          "transition": "act",
+          "queue": 0
+        },
+        {
+          "event": "release",
+          "t": 20
+        }
+      ]
+    },
+    "H03": {
+      "decisions": [
+        {
+          "attempt": 1,
+          "t": 1,
+          "label": "review",
+          "transition": "escalate",
+          "queue": 0
+        },
+        {
+          "attempt": 2,
+          "t": 4,
+          "label": "review",
+          "transition": "escalate",
+          "queue": 0
+        },
+        {
+          "attempt": 3,
+          "t": 6,
+          "label": "allow",
+          "transition": "act",
+          "queue": 0
+        }
+      ],
+      "log": [
+        {
+          "event": "decision",
+          "t": 1,
+          "attempt": 1,
+          "label": "review",
+          "transition": "escalate",
+          "queue": 0
+        },
+        {
+          "event": "review_request",
+          "t": 1
+        },
+        {
+          "event": "review_complete",
+          "t": 2,
+          "outcome": "approve",
+          "delay": 1
+        },
+        {
+          "event": "decision",
+          "t": 4,
+          "attempt": 2,
+          "label": "review",
+          "transition": "escalate",
+          "queue": 0
+        },
+        {
+          "event": "review_request",
+          "t": 4
+        },
+        {
+          "event": "review_complete",
+          "t": 5,
+          "outcome": "approve",
+          "delay": 1
+        },
+        {
+          "event": "decision",
+          "t": 6,
+          "attempt": 3,
+          "label": "allow",
+          "transition": "act",
+          "queue": 0
+        },
+        {
+          "event": "release",
+          "t": 6
+        }
+      ]
+    },
+    "H04": {
+      "decisions": [
+        {
+          "attempt": 1,
+          "t": 1,
+          "label": "review",
+          "transition": "escalate",
+          "queue": 0
+        },
+        {
+          "attempt": 2,
+          "t": 5,
+          "label": "review",
+          "transition": "escalate",
+          "queue": 0
+        },
+        {
+          "attempt": 3,
+          "t": 7,
+          "label": "allow",
+          "transition": "act",
+          "queue": 0
+        }
+      ],
+      "log": [
+        {
+          "event": "decision",
+          "t": 1,
+          "attempt": 1,
+          "label": "review",
+          "transition": "escalate",
+          "queue": 0
+        },
+        {
+          "event": "review_request",
+          "t": 1
+        },
+        {
+          "event": "review_complete",
+          "t": 2,
+          "outcome": "reject",
+          "delay": 1
+        },
+        {
+          "event": "decision",
+          "t": 5,
+          "attempt": 2,
+          "label": "review",
+          "transition": "escalate",
+          "queue": 0
+        },
+        {
+          "event": "review_request",
+          "t": 5
+        },
+        {
+          "event": "review_complete",
+          "t": 6,
+          "outcome": "approve",
+          "delay": 1
+        },
+        {
+          "event": "decision",
+          "t": 7,
+          "attempt": 3,
+          "label": "allow",
+          "transition": "act",
+          "queue": 0
+        },
+        {
+          "event": "release",
+          "t": 7
+        }
+      ]
+    },
+    "H05": {
+      "decisions": [
+        {
+          "attempt": 1,
+          "t": 1,
+          "label": "review",
+          "transition": "escalate",
+          "queue": 0
+        },
+        {
+          "attempt": 2,
+          "t": 12,
+          "label": "allow",
+          "transition": "act",
+          "queue": 0
+        },
+        {
+          "attempt": 3,
+          "t": 13,
+          "label": "review",
+          "transition": "escalate",
+          "queue": 0
+        }
+      ],
+      "log": [
+        {
+          "event": "decision",
+          "t": 1,
+          "attempt": 1,
+          "label": "review",
+          "transition": "escalate",
+          "queue": 0
+        },
+        {
+          "event": "review_request",
+          "t": 1
+        },
+        {
+          "event": "review_complete",
+          "t": 2,
+          "outcome": "approve",
+          "delay": 1
+        },
+        {
+          "event": "decision",
+          "t": 12,
+          "attempt": 2,
+          "label": "allow",
+          "transition": "act",
+          "queue": 0
+        },
+        {
+          "event": "release",
+          "t": 12
+        },
+        {
+          "event": "decision",
+          "t": 13,
+          "attempt": 3,
+          "label": "review",
+          "transition": "escalate",
+          "queue": 0
+        },
+        {
+          "event": "review_request",
+          "t": 13
+        }
+      ]
+    },
+    "H06": {
+      "decisions": [
+        {
+          "attempt": 1,
+          "t": 1,
+          "label": "review",
+          "transition": "escalate",
+          "queue": 0
+        },
+        {
+          "attempt": 2,
+          "t": 6,
+          "label": "allow",
+          "transition": "act",
+          "queue": 4
+        },
+        {
+          "attempt": 3,
+          "t": 7,
+          "label": "block",
+          "transition": "stop",
+          "queue": 4
+        }
+      ],
+      "log": [
+        {
+          "event": "decision",
+          "t": 1,
+          "attempt": 1,
+          "label": "review",
+          "transition": "escalate",
+          "queue": 0
+        },
+        {
+          "event": "review_request",
+          "t": 1
+        },
+        {
+          "event": "review_complete",
+          "t": 6,
+          "outcome": "approve",
+          "delay": 5
+        },
+        {
+          "event": "decision",
+          "t": 6,
+          "attempt": 2,
+          "label": "allow",
+          "transition": "act",
+          "queue": 4
+        },
+        {
+          "event": "release",
+          "t": 6
+        },
+        {
+          "event": "decision",
+          "t": 7,
+          "attempt": 3,
+          "label": "block",
+          "transition": "stop",
+          "queue": 4
+        }
+      ]
+    },
+    "H07": {
+      "decisions": [
+        {
+          "attempt": 1,
+          "t": 1,
+          "label": "review",
+          "transition": "escalate",
+          "queue": 0
+        },
+        {
+          "attempt": 2,
+          "t": 4,
+          "label": "review",
+          "transition": "escalate",
+          "queue": 0
+        },
+        {
+          "attempt": 3,
+          "t": 6,
+          "label": "allow",
+          "transition": "act",
+          "queue": 0
+        }
+      ],
+      "log": [
+        {
+          "event": "decision",
+          "t": 1,
+          "attempt": 1,
+          "label": "review",
+          "transition": "escalate",
+          "queue": 0
+        },
+        {
+          "event": "review_request",
+          "t": 1
+        },
+        {
+          "event": "invalid_review",
+          "t": 2,
+          "outcome": "approve"
+        },
+        {
+          "event": "invalid_review",
+          "t": 3,
+          "outcome": "approve"
+        },
+        {
+          "event": "decision",
+          "t": 4,
+          "attempt": 2,
+          "label": "review",
+          "transition": "escalate",
+          "queue": 0
+        },
+        {
+          "event": "review_complete",
+          "t": 5,
+          "outcome": "approve",
+          "delay": 4
+        },
+        {
+          "event": "decision",
+          "t": 6,
+          "attempt": 3,
+          "label": "allow",
+          "transition": "act",
+          "queue": 0
+        },
+        {
+          "event": "release",
+          "t": 6
+        }
+      ]
+    },
+    "H08": {
+      "decisions": [
+        {
+          "attempt": 1,
+          "t": 1,
+          "label": "review",
+          "transition": "escalate",
+          "queue": 0
+        },
+        {
+          "attempt": 2,
+          "t": 6,
+          "label": "block",
+          "transition": "verify",
+          "queue": 0
+        },
+        {
+          "attempt": 3,
+          "t": 8,
+          "label": "allow",
+          "transition": "act",
+          "queue": 0
+        }
+      ],
+      "log": [
+        {
+          "event": "decision",
+          "t": 1,
+          "attempt": 1,
+          "label": "review",
+          "transition": "escalate",
+          "queue": 0
+        },
+        {
+          "event": "review_request",
+          "t": 1
+        },
+        {
+          "event": "review_complete",
+          "t": 2,
+          "outcome": "approve",
+          "delay": 1
+        },
+        {
+          "event": "decision",
+          "t": 6,
+          "attempt": 2,
+          "label": "block",
+          "transition": "verify",
+          "queue": 0
+        },
+        {
+          "event": "decision",
+          "t": 8,
+          "attempt": 3,
+          "label": "allow",
+          "transition": "act",
+          "queue": 0
+        },
+        {
+          "event": "release",
+          "t": 8
+        }
+      ]
+    },
+    "H09": {
+      "decisions": [
+        {
+          "attempt": 1,
+          "t": 1,
+          "label": "block",
+          "transition": "verify",
+          "queue": 0
+        },
+        {
+          "attempt": 2,
+          "t": 3,
+          "label": "block",
+          "transition": "verify",
+          "queue": 0
+        },
+        {
+          "attempt": 3,
+          "t": 5,
+          "label": "allow",
+          "transition": "act",
+          "queue": 0
+        }
+      ],
+      "log": [
+        {
+          "event": "decision",
+          "t": 1,
+          "attempt": 1,
+          "label": "block",
+          "transition": "verify",
+          "queue": 0
+        },
+        {
+          "event": "decision",
+          "t": 3,
+          "attempt": 2,
+          "label": "block",
+          "transition": "verify",
+          "queue": 0
+        },
+        {
+          "event": "decision",
+          "t": 5,
+          "attempt": 3,
+          "label": "allow",
+          "transition": "act",
+          "queue": 0
+        },
+        {
+          "event": "release",
+          "t": 5
+        }
+      ]
+    },
+    "H10": {
+      "decisions": [
+        {
+          "attempt": 1,
+          "t": 1,
+          "label": "block",
+          "transition": "retry",
+          "queue": 0
+        },
+        {
+          "attempt": 2,
+          "t": 2,
+          "label": "block",
+          "transition": "stop",
+          "queue": 0
+        },
+        {
+          "attempt": 3,
+          "t": 4,
+          "label": "allow",
+          "transition": "act",
+          "queue": 0
+        }
+      ],
+      "log": [
+        {
+          "event": "decision",
+          "t": 1,
+          "attempt": 1,
+          "label": "block",
+          "transition": "retry",
+          "queue": 0
+        },
+        {
+          "event": "retry",
+          "t": 1
+        },
+        {
+          "event": "decision",
+          "t": 2,
+          "attempt": 2,
+          "label": "block",
+          "transition": "stop",
+          "queue": 0
+        },
+        {
+          "event": "decision",
+          "t": 4,
+          "attempt": 3,
+          "label": "allow",
+          "transition": "act",
+          "queue": 0
+        },
+        {
+          "event": "release",
+          "t": 4
+        }
+      ]
+    },
+    "H11": {
+      "decisions": [
+        {
+          "attempt": 1,
+          "t": 1,
+          "label": "review",
+          "transition": "escalate",
+          "queue": 0
+        },
+        {
+          "attempt": 2,
+          "t": 3,
+          "label": "review",
+          "transition": "escalate",
+          "queue": 0
+        },
+        {
+          "attempt": 3,
+          "t": 5,
+          "label": "allow",
+          "transition": "act",
+          "queue": 0
+        }
+      ],
+      "log": [
+        {
+          "event": "decision",
+          "t": 1,
+          "attempt": 1,
+          "label": "review",
+          "transition": "escalate",
+          "queue": 0
+        },
+        {
+          "event": "review_request",
+          "t": 1
+        },
+        {
+          "event": "decision",
+          "t": 3,
+          "attempt": 2,
+          "label": "review",
+          "transition": "escalate",
+          "queue": 0
+        },
+        {
+          "event": "review_complete",
+          "t": 4,
+          "outcome": "approve",
+          "delay": 3
+        },
+        {
+          "event": "decision",
+          "t": 5,
+          "attempt": 3,
+          "label": "allow",
+          "transition": "act",
+          "queue": 0
+        },
+        {
+          "event": "release",
+          "t": 5
+        }
+      ]
+    },
+    "H12": {
+      "decisions": [
+        {
+          "attempt": 1,
+          "t": 2,
+          "label": "review",
+          "transition": "escalate",
+          "queue": 0
+        },
+        {
+          "attempt": 2,
+          "t": 5,
+          "label": "allow",
+          "transition": "act",
+          "queue": 0
+        },
+        {
+          "attempt": 3,
+          "t": 6,
+          "label": "allow",
+          "transition": "act",
+          "queue": 0
+        }
+      ],
+      "log": [
+        {
+          "event": "decision",
+          "t": 2,
+          "attempt": 1,
+          "label": "review",
+          "transition": "escalate",
+          "queue": 0
+        },
+        {
+          "event": "review_request",
+          "t": 2
+        },
+        {
+          "event": "review_complete",
+          "t": 3,
+          "outcome": "approve",
+          "delay": 1
+        },
+        {
+          "event": "decision",
+          "t": 5,
+          "attempt": 2,
+          "label": "allow",
+          "transition": "act",
+          "queue": 0
+        },
+        {
+          "event": "release",
+          "t": 5
+        },
+        {
+          "event": "decision",
+          "t": 6,
+          "attempt": 3,
+          "label": "allow",
+          "transition": "act",
+          "queue": 0
+        },
+        {
+          "event": "release",
+          "t": 6
+        }
+      ]
+    },
+    "H13": {
+      "decisions": [
+        {
+          "attempt": 1,
+          "t": 1,
+          "label": "review",
+          "transition": "escalate",
+          "queue": 0
+        },
+        {
+          "attempt": 2,
+          "t": 6,
+          "label": "review",
+          "transition": "escalate",
+          "queue": 0
+        },
+        {
+          "attempt": 3,
+          "t": 8,
+          "label": "allow",
+          "transition": "act",
+          "queue": 0
+        }
+      ],
+      "log": [
+        {
+          "event": "decision",
+          "t": 1,
+          "attempt": 1,
+          "label": "review",
+          "transition": "escalate",
+          "queue": 0
+        },
+        {
+          "event": "review_request",
+          "t": 1
+        },
+        {
+          "event": "invalid_review",
+          "t": 5,
+          "outcome": "approve"
+        },
+        {
+          "event": "decision",
+          "t": 6,
+          "attempt": 2,
+          "label": "review",
+          "transition": "escalate",
+          "queue": 0
+        },
+        {
+          "event": "review_request",
+          "t": 6
+        },
+        {
+          "event": "review_complete",
+          "t": 7,
+          "outcome": "approve",
+          "delay": 1
+        },
+        {
+          "event": "decision",
+          "t": 8,
+          "attempt": 3,
+          "label": "allow",
+          "transition": "act",
+          "queue": 0
+        },
+        {
+          "event": "release",
+          "t": 8
+        }
+      ]
+    },
+    "H14": {
+      "decisions": [
+        {
+          "attempt": 1,
+          "t": 1,
+          "label": "review",
+          "transition": "escalate",
+          "queue": 0
+        },
+        {
+          "attempt": 2,
+          "t": 4,
+          "label": "block",
+          "transition": "stop",
+          "queue": 0
+        },
+        {
+          "attempt": 3,
+          "t": 6,
+          "label": "allow",
+          "transition": "act",
+          "queue": 0
+        }
+      ],
+      "log": [
+        {
+          "event": "decision",
+          "t": 1,
+          "attempt": 1,
+          "label": "review",
+          "transition": "escalate",
+          "queue": 0
+        },
+        {
+          "event": "review_request",
+          "t": 1
+        },
+        {
+          "event": "review_complete",
+          "t": 2,
+          "outcome": "approve",
+          "delay": 1
+        },
+        {
+          "event": "decision",
+          "t": 4,
+          "attempt": 2,
+          "label": "block",
+          "transition": "stop",
+          "queue": 0
+        },
+        {
+          "event": "decision",
+          "t": 6,
+          "attempt": 3,
+          "label": "allow",
+          "transition": "act",
+          "queue": 0
+        },
+        {
+          "event": "release",
+          "t": 6
+        }
+      ]
+    },
+    "H15": {
+      "decisions": [
+        {
+          "attempt": 1,
+          "t": 1,
+          "label": "review",
+          "transition": "escalate",
+          "queue": 0
+        },
+        {
+          "attempt": 2,
+          "t": 4,
+          "label": "block",
+          "transition": "switch",
+          "queue": 0
+        },
+        {
+          "attempt": 3,
+          "t": 6,
+          "label": "allow",
+          "transition": "act",
+          "queue": 3
+        }
+      ],
+      "log": [
+        {
+          "event": "decision",
+          "t": 1,
+          "attempt": 1,
+          "label": "review",
+          "transition": "escalate",
+          "queue": 0
+        },
+        {
+          "event": "review_request",
+          "t": 1
+        },
+        {
+          "event": "review_complete",
+          "t": 2,
+          "outcome": "approve",
+          "delay": 1
+        },
+        {
+          "event": "decision",
+          "t": 4,
+          "attempt": 2,
+          "label": "block",
+          "transition": "switch",
+          "queue": 0
+        },
+        {
+          "event": "decision",
+          "t": 6,
+          "attempt": 3,
+          "label": "allow",
+          "transition": "act",
+          "queue": 3
+        },
+        {
+          "event": "release",
+          "t": 6
+        }
+      ]
+    },
+    "H16": {
+      "decisions": [
+        {
+          "attempt": 1,
+          "t": 1,
+          "label": "review",
+          "transition": "escalate",
+          "queue": 0
+        },
+        {
+          "attempt": 2,
+          "t": 6,
+          "label": "review",
+          "transition": "escalate",
+          "queue": 0
+        },
+        {
+          "attempt": 3,
+          "t": 8,
+          "label": "allow",
+          "transition": "act",
+          "queue": 0
+        }
+      ],
+      "log": [
+        {
+          "event": "decision",
+          "t": 1,
+          "attempt": 1,
+          "label": "review",
+          "transition": "escalate",
+          "queue": 0
+        },
+        {
+          "event": "review_request",
+          "t": 1
+        },
+        {
+          "event": "invalid_review",
+          "t": 5,
+          "outcome": "approve"
+        },
+        {
+          "event": "decision",
+          "t": 6,
+          "attempt": 2,
+          "label": "review",
+          "transition": "escalate",
+          "queue": 0
+        },
+        {
+          "event": "review_request",
+          "t": 6
+        },
+        {
+          "event": "review_complete",
+          "t": 7,
+          "outcome": "approve",
+          "delay": 1
+        },
+        {
+          "event": "decision",
+          "t": 8,
+          "attempt": 3,
+          "label": "allow",
+          "transition": "act",
+          "queue": 0
+        },
+        {
+          "event": "release",
+          "t": 8
+        }
+      ]
+    },
+    "H17": {
+      "decisions": [
+        {
+          "attempt": 1,
+          "t": 1,
+          "label": "review",
+          "transition": "escalate",
+          "queue": 0
+        },
+        {
+          "attempt": 2,
+          "t": 7,
+          "label": "allow",
+          "transition": "act",
+          "queue": 8
+        },
+        {
+          "attempt": 3,
+          "t": 10,
+          "label": "allow",
+          "transition": "act",
+          "queue": 8
+        }
+      ],
+      "log": [
+        {
+          "event": "decision",
+          "t": 1,
+          "attempt": 1,
+          "label": "review",
+          "transition": "escalate",
+          "queue": 0
+        },
+        {
+          "event": "review_request",
+          "t": 1
+        },
+        {
+          "event": "review_complete",
+          "t": 2,
+          "outcome": "approve",
+          "delay": 1
+        },
+        {
+          "event": "decision",
+          "t": 7,
+          "attempt": 2,
+          "label": "allow",
+          "transition": "act",
+          "queue": 8
+        },
+        {
+          "event": "release",
+          "t": 7
+        },
+        {
+          "event": "decision",
+          "t": 10,
+          "attempt": 3,
+          "label": "allow",
+          "transition": "act",
+          "queue": 8
+        },
+        {
+          "event": "release",
+          "t": 10
+        }
+      ]
+    },
+    "H18": {
+      "decisions": [
+        {
+          "attempt": 1,
+          "t": 1,
+          "label": "review",
+          "transition": "escalate",
+          "queue": 0
+        },
+        {
+          "attempt": 2,
+          "t": 4,
+          "label": "block",
+          "transition": "stop",
+          "queue": 0
+        },
+        {
+          "attempt": 3,
+          "t": 6,
+          "label": "allow",
+          "transition": "act",
+          "queue": 0
+        }
+      ],
+      "log": [
+        {
+          "event": "decision",
+          "t": 1,
+          "attempt": 1,
+          "label": "review",
+          "transition": "escalate",
+          "queue": 0
+        },
+        {
+          "event": "review_request",
+          "t": 1
+        },
+        {
+          "event": "review_complete",
+          "t": 2,
+          "outcome": "reject",
+          "delay": 1
+        },
+        {
+          "event": "decision",
+          "t": 4,
+          "attempt": 2,
+          "label": "block",
+          "transition": "stop",
+          "queue": 0
+        },
+        {
+          "event": "decision",
+          "t": 6,
+          "attempt": 3,
+          "label": "allow",
+          "transition": "act",
+          "queue": 0
+        },
+        {
+          "event": "release",
+          "t": 6
+        }
+      ]
+    },
+    "H19": {
+      "decisions": [
+        {
+          "attempt": 1,
+          "t": 1,
+          "label": "review",
+          "transition": "escalate",
+          "queue": 0
+        },
+        {
+          "attempt": 2,
+          "t": 5,
+          "label": "review",
+          "transition": "escalate",
+          "queue": 0
+        },
+        {
+          "attempt": 3,
+          "t": 7,
+          "label": "allow",
+          "transition": "act",
+          "queue": 0
+        }
+      ],
+      "log": [
+        {
+          "event": "decision",
+          "t": 1,
+          "attempt": 1,
+          "label": "review",
+          "transition": "escalate",
+          "queue": 0
+        },
+        {
+          "event": "review_request",
+          "t": 1
+        },
+        {
+          "event": "review_complete",
+          "t": 2,
+          "outcome": "approve",
+          "delay": 1
+        },
+        {
+          "event": "decision",
+          "t": 5,
+          "attempt": 2,
+          "label": "review",
+          "transition": "escalate",
+          "queue": 0
+        },
+        {
+          "event": "review_request",
+          "t": 5
+        },
+        {
+          "event": "review_complete",
+          "t": 6,
+          "outcome": "approve",
+          "delay": 1
+        },
+        {
+          "event": "decision",
+          "t": 7,
+          "attempt": 3,
+          "label": "allow",
+          "transition": "act",
+          "queue": 0
+        },
+        {
+          "event": "release",
+          "t": 7
+        }
+      ]
+    },
+    "H20": {
+      "decisions": [
+        {
+          "attempt": 1,
+          "t": 1,
+          "label": "review",
+          "transition": "escalate",
+          "queue": 0
+        },
+        {
+          "attempt": 2,
+          "t": 4,
+          "label": "block",
+          "transition": "verify",
+          "queue": 0
+        },
+        {
+          "attempt": 3,
+          "t": 6,
+          "label": "allow",
+          "transition": "act",
+          "queue": 0
+        }
+      ],
+      "log": [
+        {
+          "event": "decision",
+          "t": 1,
+          "attempt": 1,
+          "label": "review",
+          "transition": "escalate",
+          "queue": 0
+        },
+        {
+          "event": "review_request",
+          "t": 1
+        },
+        {
+          "event": "review_complete",
+          "t": 2,
+          "outcome": "approve",
+          "delay": 1
+        },
+        {
+          "event": "decision",
+          "t": 4,
+          "attempt": 2,
+          "label": "block",
+          "transition": "verify",
+          "queue": 0
+        },
+        {
+          "event": "decision",
+          "t": 6,
+          "attempt": 3,
+          "label": "allow",
+          "transition": "act",
+          "queue": 0
+        },
+        {
+          "event": "release",
+          "t": 6
+        }
+      ]
+    },
+    "H21": {
+      "decisions": [
+        {
+          "attempt": 1,
+          "t": 1,
+          "label": "review",
+          "transition": "escalate",
+          "queue": 0
+        },
+        {
+          "attempt": 2,
+          "t": 5,
+          "label": "allow",
+          "transition": "act",
+          "queue": 0
+        },
+        {
+          "attempt": 3,
+          "t": 8,
+          "label": "allow",
+          "transition": "act",
+          "queue": 0
+        }
+      ],
+      "log": [
+        {
+          "event": "decision",
+          "t": 1,
+          "attempt": 1,
+          "label": "review",
+          "transition": "escalate",
+          "queue": 0
+        },
+        {
+          "event": "review_request",
+          "t": 1
+        },
+        {
+          "event": "review_complete",
+          "t": 2,
+          "outcome": "approve",
+          "delay": 1
+        },
+        {
+          "event": "decision",
+          "t": 5,
+          "attempt": 2,
+          "label": "allow",
+          "transition": "act",
+          "queue": 0
+        },
+        {
+          "event": "release",
+          "t": 5
+        },
+        {
+          "event": "decision",
+          "t": 8,
+          "attempt": 3,
+          "label": "allow",
+          "transition": "act",
+          "queue": 0
+        },
+        {
+          "event": "release",
+          "t": 8
+        }
+      ]
+    },
+    "H22": {
+      "decisions": [
+        {
+          "attempt": 1,
+          "t": 1,
+          "label": "block",
+          "transition": "retry",
+          "queue": 0
+        },
+        {
+          "attempt": 2,
+          "t": 4,
+          "label": "allow",
+          "transition": "act",
+          "queue": 0
+        },
+        {
+          "attempt": 3,
+          "t": 8,
+          "label": "allow",
+          "transition": "act",
+          "queue": 0
+        }
+      ],
+      "log": [
+        {
+          "event": "decision",
+          "t": 1,
+          "attempt": 1,
+          "label": "block",
+          "transition": "retry",
+          "queue": 0
+        },
+        {
+          "event": "retry",
+          "t": 1
+        },
+        {
+          "event": "decision",
+          "t": 4,
+          "attempt": 2,
+          "label": "allow",
+          "transition": "act",
+          "queue": 0
+        },
+        {
+          "event": "release",
+          "t": 4
+        },
+        {
+          "event": "decision",
+          "t": 8,
+          "attempt": 3,
+          "label": "allow",
+          "transition": "act",
+          "queue": 0
+        },
+        {
+          "event": "release",
+          "t": 8
+        }
+      ]
+    },
+    "H23": {
+      "decisions": [
+        {
+          "attempt": 1,
+          "t": 1,
+          "label": "review",
+          "transition": "escalate",
+          "queue": 0
+        },
+        {
+          "attempt": 2,
+          "t": 6,
+          "label": "allow",
+          "transition": "act",
+          "queue": 0
+        },
+        {
+          "attempt": 3,
+          "t": 7,
+          "label": "allow",
+          "transition": "act",
+          "queue": 0
+        }
+      ],
+      "log": [
+        {
+          "event": "decision",
+          "t": 1,
+          "attempt": 1,
+          "label": "review",
+          "transition": "escalate",
+          "queue": 0
+        },
+        {
+          "event": "review_request",
+          "t": 1
+        },
+        {
+          "event": "invalid_review",
+          "t": 3,
+          "outcome": "approve"
+        },
+        {
+          "event": "review_complete",
+          "t": 5,
+          "outcome": "approve",
+          "delay": 4
+        },
+        {
+          "event": "decision",
+          "t": 6,
+          "attempt": 2,
+          "label": "allow",
+          "transition": "act",
+          "queue": 0
+        },
+        {
+          "event": "release",
+          "t": 6
+        },
+        {
+          "event": "decision",
+          "t": 7,
+          "attempt": 3,
+          "label": "allow",
+          "transition": "act",
+          "queue": 0
+        },
+        {
+          "event": "release",
+          "t": 7
+        }
+      ]
+    },
+    "H24": {
+      "decisions": [
+        {
+          "attempt": 1,
+          "t": 1,
+          "label": "review",
+          "transition": "escalate",
+          "queue": 0
+        },
+        {
+          "attempt": 2,
+          "t": 7,
+          "label": "block",
+          "transition": "verify",
+          "queue": 0
+        },
+        {
+          "attempt": 3,
+          "t": 9,
+          "label": "allow",
+          "transition": "act",
+          "queue": 0
+        }
+      ],
+      "log": [
+        {
+          "event": "decision",
+          "t": 1,
+          "attempt": 1,
+          "label": "review",
+          "transition": "escalate",
+          "queue": 0
+        },
+        {
+          "event": "review_request",
+          "t": 1
+        },
+        {
+          "event": "review_complete",
+          "t": 2,
+          "outcome": "approve",
+          "delay": 1
+        },
+        {
+          "event": "decision",
+          "t": 7,
+          "attempt": 2,
+          "label": "block",
+          "transition": "verify",
+          "queue": 0
+        },
+        {
+          "event": "decision",
+          "t": 9,
+          "attempt": 3,
+          "label": "allow",
+          "transition": "act",
+          "queue": 0
+        },
+        {
+          "event": "release",
+          "t": 9
+        }
+      ]
+    }
+  }
+}
