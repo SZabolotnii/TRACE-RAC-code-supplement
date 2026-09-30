@@ -1,53 +1,87 @@
 # TRACE RAC code supplement: prospective LLM holdout
 
-Public companion artifact for the TRACE/RAC paper. It is a self-contained
-research artifact, requires Python ≥3.10, and has no third-party dependencies.
-It does not call the GitHub API, perform merges, or read a private gate or
-credentials. All events are synthetic.
+Public companion artifact for the paper *Trust Is Not a Score: Runtime
+Assurance Contracts for High-Risk AI Agents* (Serhii Zabolotnii). It contains
+the prospective synthetic holdout reported in the paper's evaluation section:
+a protected-branch merge workflow on which a RAC implementation and a
+separately written full stateful baseline are compared against labels from
+two blinded LLM judges.
 
-## Склад і відтворення
+The artifact is self-contained, requires Python ≥3.10, and has no third-party
+dependencies. It does not call the GitHub API, perform merges, or read a
+private gate or credentials. All events are synthetic.
 
-- `POLICY.md` — доменна політика з розділенням джерельних вимог і дослідницьких розширень.
-- `PROTOCOL.md` — зафіксований до test порядок оцінювання й наслідки.
-- `rac.py`, `baseline.py` — окремо написані stateful реалізації однієї політики; baseline не імпортує RAC.
-- `dev.json` — 8 відкритих development-сценаріїв; `test.json` — окремо створені 24 held-out епізоди.
-- `judge_packet.json` — пакет без family/split/expected; `JUDGE_INSTRUCTIONS.md` — інструкція суддям; `judge_a.json`, `judge_b.json` — первинні мітки й пояснення.
-- `*_freeze.json` — хеші й час фіксації реалізацій, корпусу та міток. Це локальний prospective freeze, не публічна пререєстрація з незалежним timestamp.
-- `execution_log.json`, `results.json` — генеровані рішення, події й описові підрахунки; `REPORT.md` — інтерпретація.
+## Language of the documents
+
+The study was run in Ukrainian. `POLICY.md`, `PROTOCOL.md`,
+`JUDGE_INSTRUCTIONS.md`, `REPORT.md`, `CORPUS_PROVENANCE.md`,
+`METHOD_REVIEW.md`, and the judges' rationales in `judge_a.json` /
+`judge_b.json` are the original Ukrainian records. `POLICY.md`, `PROTOCOL.md`,
+the episode files, and the labels are frozen by SHA-256 hashes, so they are
+kept unchanged. English translations of the policy, protocol, judge
+instructions, and report are in [`en/`](en/); where a translation and an
+original differ, the original governs.
+
+## Contents
+
+- `POLICY.md` — the domain policy, separating source requirements (GitHub
+  protected branches) from research extensions ([English](en/POLICY.md)).
+- `PROTOCOL.md` — evaluation order and outcomes fixed before the test
+  ([English](en/PROTOCOL.md)).
+- `rac.py`, `baseline.py` — separately written stateful implementations of the
+  same policy; the baseline does not import RAC.
+- `dev.json` — 8 open development scenarios; `test.json` — 24 held-out
+  episodes created separately after the implementations were frozen.
+- `judge_packet.json` — the test packet without family, split, or expected
+  labels; `JUDGE_INSTRUCTIONS.md` — instructions to the judges
+  ([English](en/JUDGE_INSTRUCTIONS.md)); `judge_a.json`, `judge_b.json` — the
+  judges' primary labels and rationales.
+- `*_freeze.json` — hashes and freeze times of the implementations, corpus,
+  and labels. This is a local prospective freeze, not a public preregistration
+  with an independent timestamp.
+- `execution_log.json`, `results.json` — generated decisions, events, and
+  descriptive counts; `REPORT.md` — interpretation ([English](en/REPORT.md)).
+- `CORPUS_PROVENANCE.md`, `METHOD_REVIEW.md` — corpus provenance and an
+  independent code review (Ukrainian).
+
+## Reproduction
 
 Run from the repository root:
 
 ```sh
+python3 check_data.py
 python3 development_check.py
 python3 evaluate.py evaluate
 ```
 
-`python3 build_artifact.py` packages `.py/.json/.md` files and `LICENSE`, extracts them
-into a temporary clean directory, and checks the structure, development
-scenarios, and byte-identical replay of results and logs. Caches and the
-private TRACE-AI-gate are excluded.
-
-`evaluate.py evaluate` checks the frozen hashes and regenerates `results.json`
-and `execution_log.json`. It reproduces system decisions and calculations
-from the saved LLM labels; it does **not** repeat stochastic model calls. The
-freeze commands record historical first-run steps and should not be rerun.
-Do not edit implementations, policy, or labels to improve results; a new
+`evaluate.py evaluate` checks the frozen hashes and regenerates
+`results.json` and `execution_log.json`; the regenerated files are
+byte-identical to the committed ones. It reproduces the system decisions and
+counts from the saved LLM labels; it does **not** repeat the stochastic model
+calls. The freeze commands record historical first-run steps and should not be
+rerun. Do not edit implementations, policy, or labels to improve results; a new
 experiment requires a separate version.
 
-## Межі висновку
+Expected result: the judges agree on all 72 attempts (30 allow, 30 review,
+12 block); RAC and the stateful baseline each match all 72 labels, with 0 of
+42 policy-violating simulated releases and 0 of 30 false refusals.
 
-The corpus was generated by an LLM after implementation freeze. Judges did
-not see implementation outputs but received the same explicit policy. This
-can assess conformance to that policy; it cannot establish that the policy is
-complete or correct for all real merges. Judges from one model family may
-share errors. Detector outputs and reviewer responses are supplied events,
-not measured CI or human actions. Time, queues, releases, and delays are
-simulated. This artifact does not support clinical, legal, industrial, or
+## Scope of the conclusions
+
+The corpus was generated by an LLM after the implementations were frozen.
+The judges did not see implementation outputs but received the same explicit
+policy. This can assess conformance to that policy; it cannot establish that
+the policy is complete or correct for all real merges. Judges from one model
+family may share errors. Detector outputs and reviewer responses are supplied
+events, not measured CI or human actions. Time, queues, releases, and delays
+are simulated. This artifact does not support clinical, legal, industrial, or
 deployment validation claims.
 
-Historical results from 280 static cases and 18 conformance traces remain
+The paper's other results (280 static cases and 18 conformance traces) are
 separate and are not pooled with this experiment. These are new study
-implementations, not a public rerun of TRACE-AI-gate. This repository does
-not include the private gate or original probe fixture generator.
+implementations, not a public rerun of the private TRACE-AI-gate, which is not
+included here, nor is the original probe's fixture generator.
 
-Licensed under Apache-2.0; see `LICENSE`.
+## Citation and licence
+
+See [`CITATION.cff`](CITATION.cff). Licensed under Apache-2.0; see `LICENSE`.

@@ -1,0 +1,16 @@
+{
+  "title": "TRACE RAC code supplement: prospective LLM holdout",
+  "upload_type": "software",
+  "description": "<p>Companion artifact for the paper <em>Trust Is Not a Score: Runtime Assurance Contracts for High-Risk AI Agents</em>. It contains a prospective synthetic holdout (24 episodes, 72 action attempts) on a protected-branch merge workflow, comparing a Runtime Assurance Contract (RAC) implementation with a separately written full stateful baseline against labels from two blinded LLM judges. Policy, implementations, corpus, and labels are frozen by SHA-256; <code>evaluate.py</code> replays the reported counts byte-identically. All events are synthetic. The original study records are in Ukrainian; English translations of the policy, protocol, judge instructions, and report are in <code>en/</code>.</p>",
+  "creators": [
+    {
+      "name": "Zabolotnii, Serhii",
+      "affiliation": "Cherkasy State Business College",
+      "orcid": "0000-0003-0242-2234"
+    }
+  ],
+  "license": "Apache-2.0",
+  "keywords": ["runtime assurance", "AI agents", "human oversight", "fail-closed gates", "agentic coding", "reproducibility"],
+  "version": "1.0.0",
+  "access_right": "open"
+}
