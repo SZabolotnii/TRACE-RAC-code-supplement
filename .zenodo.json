@@ -1,7 +1,7 @@
 {
-  "title": "TRACE RAC code supplement: prospective LLM holdout",
+  "title": "TRACE RAC code supplement: failure-injection corpora and prospective LLM holdout",
   "upload_type": "software",
-  "description": "<p>Companion artifact for the paper <em>Trust Is Not a Score: Runtime Assurance Contracts for High-Risk AI Agents</em>. It contains a prospective synthetic holdout (24 episodes, 72 action attempts) on a protected-branch merge workflow, comparing a Runtime Assurance Contract (RAC) implementation with a separately written full stateful baseline against labels from two blinded LLM judges. Policy, implementations, corpus, and labels are frozen by SHA-256; <code>evaluate.py</code> replays the reported counts byte-identically. All events are synthetic. The original study records are in Ukrainian; English translations of the policy, protocol, judge instructions, and report are in <code>en/</code>.</p>",
+  "description": "<p>Companion artifact for the paper <em>Trust Is Not a Score: Runtime Assurance Contracts for High-Risk AI Agents</em> (arXiv:2609.39717). Version 1.1.0 adds <code>failure_injection/</code>: case files (patches and labels) of the deterministic failure-injection study in agentic coding, for 174 distinct mechanisms and for an independent 124-case corpus written blind by a model of another vendor, with the decision logs reported in arXiv v2 and scripts that recompute the counts. The 280-case corpus reported in arXiv v1 is withdrawn, because most of its cases were index clones, and is not distributed. The repository root holds the prospective synthetic holdout (24 episodes, 72 action attempts) comparing a Runtime Assurance Contract implementation with a separately written full stateful baseline against labels from two blinded LLM judges; its files are unchanged. All cases are synthetic. The private gate implementation is not included.</p>",
   "creators": [
     {
       "name": "Zabolotnii, Serhii",
@@ -10,7 +10,22 @@
     }
   ],
   "license": "Apache-2.0",
-  "keywords": ["runtime assurance", "AI agents", "human oversight", "fail-closed gates", "agentic coding", "reproducibility"],
-  "version": "1.0.0",
-  "access_right": "open"
+  "keywords": [
+    "AI agents",
+    "agentic coding",
+    "fail-closed gates",
+    "failure injection",
+    "human oversight",
+    "reproducibility",
+    "runtime assurance"
+  ],
+  "version": "1.1.0",
+  "access_right": "open",
+  "related_identifiers": [
+    {
+      "identifier": "arXiv:2609.39717",
+      "relation": "isSupplementTo",
+      "scheme": "arxiv"
+    }
+  ]
 }

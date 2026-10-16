@@ -1,0 +1,54 @@
+{
+  "deny": [
+    ".env*",
+    ".git/**"
+  ],
+  "outside": {
+    "<outside>/tracegate-probe-outside-dir/": "directory outside the repository",
+    "<outside>/tracegate-probe-outside.txt": "file outside the repository"
+  },
+  "repo_files": {
+    ".git/config": "[core]\n",
+    "README.md": "root file outside the scope\n",
+    "src/pkg/mod.py": "y = 1\n",
+    "src/target.py": "x = 1\n",
+    "tests/fixture.py": "z = 1\n"
+  },
+  "symlinks": {
+    "src/esc-c3": "<repo>/src/esc-c3-b",
+    "src/esc-c3-a": "<outside>/tracegate-probe-outside.txt",
+    "src/esc-c3-b": "<repo>/src/esc-c3-a",
+    "src/esc-chain": "<repo>/src/esc-chain-mid",
+    "src/esc-chain-mid": "<outside>/tracegate-probe-outside.txt",
+    "src/esc-dangling": "<outside>/no-such-file",
+    "src/esc-dir": "<outside>/tracegate-probe-outside-dir",
+    "src/esc-direct": "<outside>/tracegate-probe-outside.txt",
+    "src/esc-etc": "/etc/hostname",
+    "src/esc-git": "../.git/config",
+    "src/esc-loop-a": "<repo>/src/esc-loop-b",
+    "src/esc-loop-b": "<repo>/src/esc-loop-a",
+    "src/esc-readme": "../README.md",
+    "src/esc-rel": "../../tracegate-probe-outside.txt",
+    "src/esc-up": "..",
+    "src/ok-abs": "<repo>/src/target.py",
+    "src/ok-c3": "<repo>/src/ok-c3-b",
+    "src/ok-c3-a": "target.py",
+    "src/ok-c3-b": "<repo>/src/ok-c3-a",
+    "src/ok-chain": "<repo>/src/ok-chain-mid",
+    "src/ok-chain-mid": "target.py",
+    "src/ok-dangling": "missing.py",
+    "src/ok-pkg": "<repo>/src/pkg",
+    "src/ok-rel": "target.py",
+    "src/ok-self": "<repo>/src/target.py",
+    "src/ok-sub": "pkg",
+    "src/ok-to-tests": "../tests/fixture.py",
+    "src/pkg/ok-up": "../target.py",
+    "tests/esc-tests": "<outside>/tracegate-probe-outside.txt",
+    "tests/ok-fixture": "fixture.py",
+    "tests/ok-to-src": "../src/target.py"
+  },
+  "write_scope": [
+    "src/**",
+    "tests/**"
+  ]
+}

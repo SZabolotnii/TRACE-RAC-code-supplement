@@ -1,8 +1,15 @@
-# TRACE RAC code supplement: prospective LLM holdout
+# TRACE RAC code supplement
 
 Public companion artifact for the paper *Trust Is Not a Score: Runtime
 Assurance Contracts for High-Risk AI Agents* (Serhii Zabolotnii). It contains
-the prospective synthetic holdout reported in the paper's evaluation section:
+two parts:
+
+1. **`failure_injection/`** (added in v1.1.0): the case files of the
+   deterministic failure-injection study in agentic coding, with the decision
+   logs reported in arXiv:2609.39717v2. See
+   [`failure_injection/README.md`](failure_injection/README.md).
+2. **The repository root**: the prospective synthetic holdout reported in the
+   paper's evaluation section:
 a protected-branch merge workflow on which a RAC implementation and a
 separately written full stateful baseline are compared against labels from
 two blinded LLM judges.
@@ -77,10 +84,22 @@ events, not measured CI or human actions. Time, queues, releases, and delays
 are simulated. This artifact does not support clinical, legal, industrial, or
 deployment validation claims.
 
-The paper's other results (280 static cases and 18 conformance traces) are
-separate and are not pooled with this experiment. These are new study
+The paper's other results (the failure-injection study in
+`failure_injection/` and the 18 conformance traces) are separate and are not
+pooled with this experiment. The holdout implementations are new study
 implementations, not a public rerun of the private TRACE-AI-gate, which is not
-included here, nor is the original probe's fixture generator.
+included here.
+
+## Changes since v1.0.0
+
+- v1.1.0 adds `failure_injection/`: case files (patches and labels) for the
+  174-mechanism corpus and the independent 124-case corpus, the three decision
+  logs of arXiv:2609.39717v2, and scripts that recompute the reported counts and
+  check the case files against the logs.
+- The 280-case corpus reported in arXiv v1 and in the originally submitted
+  manuscript is withdrawn: most of its cases were index clones of a few
+  templates. It is not distributed.
+- Files of the LLM holdout are unchanged; their frozen hashes still verify.
 
 ## Citation and licence
 

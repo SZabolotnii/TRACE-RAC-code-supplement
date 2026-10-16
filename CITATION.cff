@@ -1,14 +1,14 @@
 cff-version: 1.2.0
 message: "If you use this artifact, please cite it as below."
-title: "TRACE RAC code supplement: prospective LLM holdout"
+title: "TRACE RAC code supplement: failure-injection corpora and prospective LLM holdout"
 type: software
 authors:
   - family-names: Zabolotnii
     given-names: Serhii
     orcid: "https://orcid.org/0000-0003-0242-2234"
     affiliation: "Cherkasy State Business College"
-version: "1.0.0"
-date-released: "2026-09-30"
+version: "1.1.0"
+date-released: "2026-10-16"
 license: Apache-2.0
 repository-code: "https://github.com/SZabolotnii/TRACE-RAC-code-supplement"
 keywords:
@@ -20,7 +20,9 @@ keywords:
   - reproducibility
 abstract: >-
   Companion artifact for "Trust Is Not a Score: Runtime Assurance Contracts
-  for High-Risk AI Agents": a prospective synthetic holdout (24 episodes,
-  72 action attempts) comparing a Runtime Assurance Contract implementation
-  with a full stateful baseline against labels from two blinded LLM judges,
-  with frozen hashes and byte-identical replay.
+  for High-Risk AI Agents": case files and decision logs of the deterministic
+  failure-injection study in agentic coding (174 distinct mechanisms and an
+  independent 124-case corpus written blind by another model), and a
+  prospective synthetic holdout (24 episodes, 72 action attempts) comparing a
+  Runtime Assurance Contract implementation with a full stateful baseline
+  against labels from two blinded LLM judges. All cases are synthetic.
